@@ -7,16 +7,15 @@ var swiper = new Swiper('.swiper', {
     //     // stopOnLastSlide:true
     // },
     effect: 'coverflow',
-    grabCursor: true,
     centeredSlides: true,
     slidesPerView: 'auto',
+    loop: true,
     coverflowEffect: {
-        rotate: 0,
-        stretch: 200,
-        depth: 250,
-        modifier: -1,
-        slideShadows: true,
-       
+      rotate: 0,
+      stretch: 120,   // اسلایدها نزدیک‌تر می‌شن
+      depth: 200,     // عمق کم برای افکت ملایم
+      modifier: 1,
+      slideShadows: false
     },
 
   watchSlidesProgress:true,

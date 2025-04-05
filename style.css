@@ -156,9 +156,10 @@ a{
 padding-top: 50px;
 padding-bottom: 50px; */
 }
-.swiper-slide{
-width: 200px;
-}
+.swiper-slide {
+    width: 70%; /* یا مقدار دلخواه مثلاً 300px */
+    transition: all 0.3s ease;
+  }
 .swiper-container{
     position:relative;
 }
@@ -206,7 +207,7 @@ animation: coloringBack 5.5s;
   overflow: visible !important;
 
  }
- #my-swiper img{
+ /* #my-swiper img{
  width: 100%;
  height:500px;
- }
+ } */
