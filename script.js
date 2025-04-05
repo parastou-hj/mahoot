@@ -22,3 +22,67 @@ var swiper = new Swiper('.swiper', {
  
 });
 const swiperr = document.querySelector('.swiper').swiper;
+
+
+//owl-pro
+$(function(){
+  $('#owl-pro').owlCarousel({
+              rtl: true,
+              loop: true,
+              margin: 10,
+              nav:false,
+              dots:false,
+              // autoplay:true,
+              // autoplayTimeout: 3000,
+              // autoplayHoverPause: true,
+              responsive:{
+                  0:{
+                      items: 2
+                  },
+                  576:{
+                      items: 3
+                  },
+                  768:{
+                      items: 3
+                  },
+                  992:{
+                      items: 9
+                  },
+                  1600:{
+                      items: 9.5
+                  }
+              }
+  })
+})
+
+
+//sale
+$(function(){
+  $('#sale-owl-one').owlCarousel({
+              rtl: true,
+              loop: true,
+              margin: 10,
+              nav:false,
+              dots:false,
+              // autoplay:true,
+              // autoplayTimeout: 3000,
+              // autoplayHoverPause: true,
+              responsive:{
+                  0:{
+                      items: 2
+                  },
+                  576:{
+                      items: 3
+                  },
+                  768:{
+                      items: 3
+                  },
+                  992:{
+                      items: 4
+                  },
+                  1600:{
+                      items: 4.5
+                  }
+              }
+  })
+})

@@ -211,3 +211,95 @@ animation: coloringBack 5.5s;
  width: 100%;
  height:500px;
  } */
+
+/*---------------------products-------------------*/
+.pro-img{
+  border:2px solid hsl(40.79deg 99.02% 59.8%);
+  border-radius: 50%;
+  padding: 2px;
+
+}
+.pro-img img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100% ;
+  object-fit: cover;
+}
+
+
+
+/*---------------------sale-------------------*/
+.sale {
+  direction: rtl;
+  width: 100%;
+  padding-right: 100px; /* فضای خالی از سمت راست */
+  position: relative;
+  box-sizing: border-box; /* پدینگ توی عرض کل حساب می‌شه */
+}
+
+.timer-sec {
+  position: absolute;
+  right: 0px; /* می‌تونی اینو به right: 10px یا هر مقداری تنظیم کنی */
+  top: 0px;
+  height: 100%;
+  width: 100px; /* یه عرض ثابت بده تا با پدینگ هماهنگ بشه */
+}
+
+.product-owl-container {
+  width: calc(100% - 100px);
+  max-width: 100%;
+  margin-left: 0; /* از چپ فاصله نگیره */
+  margin-right: auto; /* به راست بچسبه */
+  direction: rtl; /* کروسل هم راست به چپ باشه */
+}
+
+#sale-owl-one {
+  width: 100%; /* عرض داخلی کروسل */
+}
+
+.product-box{
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: #fff;
+  margin:10px 4px;
+  transform: translateY(0px);
+  transition: .3s;
+}
+.product-box:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 15px #7e7d7d62;
+  transition: .3s;
+}
+.product-box a{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 5px;
+  color: #333;
+}
+
+.product-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 10px;
+  
+}
+.product-box .product-img img{
+  width: 100%;
+  height: 144px;
+  object-fit: fill;
+}
+.product-box h3{
+  font-size: .9em;
+  margin-top: 15px;
+  font-family: IRANYekanWebRegular;
+}
+.product-box a span{
+  background-color: var(--red);
+  padding: 3px 15px;
+  color: #fff;
+  border-radius: 50px;
+  margin-top: 10px;
+}
