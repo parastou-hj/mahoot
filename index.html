@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ماهوت استیل</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./query.css">
     <script
     src="https://kit.fontawesome.com/f595c78486.js"
     crossorigin="anonymous"
@@ -25,33 +26,144 @@
         </div>
         <div class="container-fluid header-container p-0">
             <div class="row col-xl-11 header-top align-items-center py-3">
-                <div class="col-lg-2">
+                <div class=" col-4 bar-menu justify-content-center align-items-center">
+                    <i class="fa-solid fa-bars fa-xxl"></i>
+                   </div>
+                <div class="col-lg-2 col-4">
                     <img src="./images/brand-img.png" alt="">
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-5 web-search">
                     <div class="search-input position-relative">
                         <input type="text" placeholder='جستجو در ماهوت...'>
                         <img src="./images/magnifi.png" alt="">
                     </div>
                 </div>
-                <div class="col-lg-5 user-basket d-flex">
+                <div class="col-lg-5 col-4 user-basket d-flex">
                     <div class="user d-flex align-items-end">
-                        <div class="user-txt d-flex flex-column ms-1">
-                            <span class="font-gray">کاربری</span>
-                            <span class="fw-bold">ورود / ثبت نام</span>
+                        <div class="d-flex user-btn">
+                            <div class="user-txt ms-1">
+                                <span class="font-gray">کاربری</span>
+                                <span class="fw-bold">ورود / ثبت نام</span>
+                            </div>
+                            <div class="user-img">
+                                <img src="./images/user.png" alt="">
+                            </div>
                         </div>
-                        <div class="user-img">
-                            <img src="./images/user.png" alt="">
-                        </div>
+                        <div class="user-menu">
+                            <div class="user-header">
+                                <div class="user-avatar">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                <div class="user-info">
+                                    <div class="user-name">حساب کاربری</div>
+                                    <div class="user-subtitle">نام کاربر</div>
+                                </div>
+                            </div>
+                    
+                            <a href="#" class="menu-item">
+                                <i class="fa fa-user-pen"></i>
+                                <span>ویرایش مشخصات فردی</span>
+                            </a>
+                    
+                            <div class="wallet-item">
+                                <div class="wallet-info">
+                                    <i class="fa fa-wallet wallet-icon"></i>
+                                    <span>کیف پول</span>
+                                </div>
+                                <span class="wallet-amount">۰ تومان</span>
+                            </div>
+                    
+                            <a href="#" class="menu-item">
+                                <i class="fa fa-heart"></i>
+                                <span>لیست علاقه‌مندی</span>
+                            </a>
+                    
+                            <a href="#" class="menu-item">
+                                <i class="fa fa-box"></i>
+                                <span>سفارش‌های من</span>
+                            </a>
+                    
+                            <a href="#" class="menu-item logout">
+                                <i class="fa fa-right-from-bracket"></i>
+                                <span>خروج از حساب کاربری</span>
+                            </a>
+                          </div>
                     </div>
-                    <div class="basket d-flex align-items-end me-4">
-                        <div class="basket-txt d-flex flex-column ms-1">
-                            <span class="font-gray">سبد خرید</span>
-                            <span class="fw-bold">خالی است</span>
+                    <div class="basket d-flex align-items-end me-4 position-relative">
+                        <div class="cart-header d-flex">
+                            <div class="basket-txt  ms-1">
+                                <span class="font-gray">سبد خرید</span>
+                                <span class="fw-bold">خالی است</span>
+                            </div>
+                            <div class="basket-img">
+                                <img src="./images/basket.png" alt="">
+                            </div>
                         </div>
-                        <div class="basket-img">
-                            <img src="./images/basket.png" alt="">
-                        </div>
+                        <div class="cart-menu-container">
+                            <div class="container cart-menu">
+                              <div class="header">
+                                <div class="cart-title">سبد خرید شما</div>
+                                <span class="new-badge">2 عدد کالا</span>
+                                <a href="#" class="back-button">
+                                    <span>مشاهده سبد خرید</span>
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </a>
+                                  
+                              </div>
+                      
+                              <div class="products-cart-container">
+                                 <div class="product-card">
+                                    <div class="product-header">
+                                        <div class="product-card-img">
+                                          <img src="/images/sale/2.png" alt="" class="product-image">
+                                        </div>
+                                        <div class="product-info">
+                                          <h3>گریل ترکیبی 60</h3>
+                                        </div>
+                                    </div>
+                                    <div class="price"> 
+                                        <div class="controls">
+                                            <div class="quantity">
+                                                <button>+</button>
+                                                <span>1</span>
+                                                <button class="delete-btn">🗑</button>
+                                            </div>
+                                            
+                                        </div>
+                                        <span class="amount">12,490,000 تومان</span>
+                                    </div>
+                                </div>
+                                <div class="product-card">
+                                  <div class="product-header">
+                                    <div class="product-card-img">
+                                      <img src="/images/sale/s1.png" alt="" class="product-image">
+                                    </div>
+                                      <div class="product-info">
+                                        <h3>گریل ترکیبی 60</h3>
+                                      </div>
+                                  </div>
+                                  <div class="price"> 
+                                      <div class="controls">
+                                          <div class="quantity">
+                                              <button>+</button>
+                                              <span>1</span>
+                                              <button class="delete-btn">🗑</button>
+                                          </div>
+                                          
+                                      </div>
+                                      <span class="amount">12,490,000 تومان</span>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <div class="checkout-button">
+                              <span class="total-price">
+                                  <span>ثبت سفارش</span>
+                                  <span>16,227,000 تومان</span>
+                              </span>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -100,10 +212,276 @@
                             <span>لوازم جانبی و ایمنی</span>
                         </a>
                     </div>
+                    <div class="pro-menu pro-equip px-0" >
+                        <div class="pro-tabs">
+                          <div class="p-tab d-flex" data-tab="bildng">
+                            <div>
+                              <span>اجاق گاز و فر</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-left"></i>
+                          </div>
+                          <div class="p-tab d-flex" data-tab="chemi">
+                            <div>
+                              <span>قابلمه و تابه</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-left"></i>
+                          </div>
+                          <div class="p-tab d-flex" data-tab="drg">
+                            <div>
+                              <span>لوازم برقی آشپزی</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-left"></i>
+                          </div>
+                          <div class="p-tab d-flex" data-tab="car">
+                            <div>
+                              <span>کارد و چنگال آشپزخانه</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-left"></i>
+                          </div>
+                          <div class="p-tab d-flex" data-tab="boxing">
+                            <div>
+                              <span>تجهیزات جانبی پخت و پز</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-left"></i>
+                          </div>
+                         
+                        </div>
+                        <div class="pro-contents">
+                          <div class="p-content" id="bildng">
+                            <a href="#">
+                              <span>همه محصولات اجاق گاز و فر</span>
+                              <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                            <div class="sub-menus d-flex justify-content-between">
+                              <div class="sub-menu">
+                                <a href="#">زیر منو اول</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو دوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو سوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو چهارم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-content" id="chemi">
+                            <a href="#">
+                              <span>همه محصولات قابلمه و تابه</span>
+                              <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                            <div class="sub-menus d-flex justify-content-between">
+                              <div class="sub-menu">
+                                <a href="#">زیر منو اول</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو دوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو سوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو چهارم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-content" id="drg">
+                            <a href="#">
+                              <span>همه محصولات لوازم برقی آشپزی</span>
+                              <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                            <div class="sub-menus d-flex justify-content-between">
+                              <div class="sub-menu">
+                                <a href="#">زیر منو اول</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو دوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو سوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو چهارم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-content" id="car">
+                            <a href="#">
+                              <span>همه محصولات کارد و چنگال آشپزخانه</span>
+                              <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                            <div class="sub-menus d-flex justify-content-between">
+                              <div class="sub-menu">
+                                <a href="#">زیر منو اول</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو دوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو سوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو چهارم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-content" id="boxing">
+                            <a href="#">
+                              <span>همه محصولات تجهیزات جانبی پخت و پز</span>
+                              <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                            <div class="sub-menus d-flex justify-content-between">
+                              <div class="sub-menu">
+                                <a href="#">زیر منو اول</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو دوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو سوم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                              <div class="sub-menu">
+                                <a href="#">زیر منو چهارم</a>
+                                <div class="sub-menu-items">
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                  <div class="s-b-item"><a href="#">آیتم</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                    </div>
                  
                 </div>
                
                 
+            </div>
+        </div>
+        <div class="row ">
+            <div class="res-search">
+                <div class="search-input position-relative">
+                    <input type="text" placeholder='جستجو در ماهوت...'>
+                    <img src="./images/magnifi.png" alt="">
+                </div>
             </div>
         </div>
     </header>
@@ -179,7 +557,36 @@
     
     </div>
 </div>
+
     <main class="">
+        <div class="fix-chat">
+            <img src="./images/chat.png" alt="">
+        </div>
+        <div class="chat-box">
+            <div class="chat-header p-lg-3 p-2">
+              <span>  پشتیبانی و مشاوره خرید</span>
+              <i class="fa-solid fa-close"></i>
+            </div>
+            <div class="chat-text p-2">
+              <div class="box-quiz">
+                <span>سلام و احترام، در چه زمینه ای سوال دارید؟</span>
+                <div class="mt-3">
+                  <div class="quiz">
+                    <span>پیگیری سفارش</span>
+                  </div>
+                  <div class="quiz">
+                    <span>راهنمایی</span>
+                  </div>
+                  <div class="quiz">
+                    <span>خدمات پس از فروش</span>
+                  </div>
+                  <div class="quiz">
+                    <span>بازگشت وجه</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
        
         <!--------------------------product-sec-->
 
@@ -293,20 +700,29 @@
         <!--------------------------sale-sec-->
         <div class="sale-sec container-fluid">
             <div class="row col-xl-11 main-row">
-                <div class="sale">
-                    <div class="timer-sec d-flex flex-column justify-content-start text-center mt-lg-5">
+                <div class="sale ">
+                    <div class="timer-sec d-flex flex-column justify-content-start text-center mt-lg-5 mt-4">
                         <strong>حراجستون</strong>
                         <div class="sale-img">
                             <img src="./images/sale/sheypoor.png" alt="">
                         </div>
-                        <span class="font-bold">بزرگترین حراج روزانه</span>
-                        <div class="timer"></div>
+                        <span class="font-bold my-1">بزرگترین حراج روزانه</span>
+                        <div class="timer my-1">
+                            <div class="" id="countdown">
+                                <span id="seconds"></span>
+                                <span> : </span>
+                                <span id="minutes"></span>
+                                <span> : </span>
+                                <span id="hours"></span>
+                                
+                            </div>
+                        </div>
                         <a href="#">
                             <span>مشاهده همه</span>
                             <i class="fa-solid fa-chevron-left"></i>
                         </a>
                     </div>
-                    <div class="product-owl-container one mt-lg-5 mt-4">
+                    <div class="product-owl-container one mt-5">
                         <div class=" nav-btn" id="one-right">
                             <i class="fa-solid fa-chevron-right"></i>
                         </div>
@@ -319,10 +735,10 @@
                                     <div class="product-img">
                                         <img src="./images/sale/1.png" alt="">
                                     </div>
-                                    <h3>گریل ترکیبی 60</h3>
+                                    <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
                                         <div class="price bg-orange mt-2 px-2 py-1">
@@ -337,10 +753,10 @@
                                     <div class="product-img">
                                         <img src="./images/sale/2.png" alt="">
                                     </div>
-                                    <h3>گریل ترکیبی 60</h3>
+                                    <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
                                         <div class="price bg-orange mt-2 px-2 py-1">
@@ -355,10 +771,10 @@
                                     <div class="product-img">
                                         <img src="./images/sale/3.png" alt="">
                                     </div>
-                                    <h3>گریل ترکیبی 60</h3>
+                                    <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
                                         <div class="price bg-orange mt-2 px-2 py-1">
@@ -373,10 +789,10 @@
                                     <div class="product-img">
                                         <img src="./images/sale/4.png" alt="">
                                     </div>
-                                    <h3>گریل ترکیبی 60</h3>
+                                    <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
                                         <div class="price bg-orange mt-2 px-2 py-1">
@@ -391,10 +807,10 @@
                                     <div class="product-img">
                                         <img src="./images/sale/2.png" alt="">
                                     </div>
-                                    <h3>گریل ترکیبی 60</h3>
+                                    <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
                                         <div class="price bg-orange mt-2 px-2 py-1">
@@ -413,7 +829,7 @@
         </div>
 
         <!--------------------------product-swiper-sec------------->
-        <div class="product-swiper-sec container-fluid mt-lg-5">
+        <div class="product-swiper-sec container-fluid mt-5">
             <div class="row col-xl-11 main-row">
                 <div class="product-swiper">
                     <div class="swiper" id="my-swiper-2">
@@ -454,17 +870,6 @@
                     </div>
                 
                     <div class="swiper-pagination"></div>
-                    
-                
-                   
-                    <!-- <div class="paginate-container">
-                        <div class="paginate-item"></div>
-                        <div class="paginate-item"></div>
-                        <div class="paginate-item"></div>
-                    </div> -->
-                    
-                    <!-- If we need scrollbar -->
-                    <!-- <div class="swiper-scrollbar"></div> -->
                     </div>
                 
                 </div>
@@ -472,33 +877,33 @@
         </div>
 
         <!--------------------------most-sale-sec----------------->
-        <div class="most-sale container-fluid mt-lg-5">
+        <div class="most-sale container-fluid mt-5">
             <div class="row col-xl-11 main-row">
-                <div class="product-title">
+                <div class="product-title d-flex justify-content-between">
                     <span class="red">پرفروش ترین ها</span>
                     <a href="#">مشاهده همه</a>
                     
                 </div>
-                <div class="product-owl-container one mt-lg-1">
+                <div class="product-owl-container one mt-2">
                     <div class=" nav-btn" id="two-right">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class=" nav-btn" id="two-left">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
-                    <div id="sale-owl-two" class="owl-carousel owl-theme product-owl">
+                    <div id="sale-owl-two" class="owl-carousel owl-theme product-owl mt-lg-2">
                         <div class="product-box most-sale-item">
                             <a href="#">
                                 <div class="product-img">
                                     <img src="./images/sale/m1.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -510,13 +915,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/1.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -528,13 +933,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/m2.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -546,13 +951,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/2.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
-                                        <div class="price bg-orange mt-2 px-2 py-1">
+                                        <div class="price mt-2 px-2 py-1">
                                             <span>58,600,000</span>
                                             <span>تومان</span>
                                         </div>
@@ -564,13 +969,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/m3.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
-                                        <div class="price bg-orange mt-2 px-2 py-1">
+                                        <div class="price mt-2 px-2 py-1">
                                             <span>58,600,000</span>
                                             <span>تومان</span>
                                         </div>
@@ -585,155 +990,100 @@
         </div>
 
         <!--------------------------category-owl---------------->
-        <div class="category-sec container-fluid mt-lg-5">
-            <div class="row col-xl-11 main-row">
-                <div class="col-lg-2">
-                    <div class="pro-card d-flex flex-column align-items-center">
-                        <a href="#" class="d-flex flex-column align-items-center">
-                            <div class="pro-img-border">
-                                <div class="pro-img">
-                                    <img src="images/category/1.png" alt="">
+        <div class="category-sec container-fluid mt-5">
+            <div class="row col-xl-11 main-row ">
+                <div class="circle-category">
+                    <div class="category-item">
+                        <div class="pro-card d-flex flex-column align-items-center">
+                            <img class="cook" src="./images/cook.png" alt="">
+                            <a href="#" class="d-flex flex-column align-items-center">
+                                <div class="pro-img-border">
+                                    <div class="pro-img">
+                                        <img src="images/category/1.png" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="lesur-text">
-                                <span>تجهیزات سرد</span>
-                            </div>
-                        </a>
-                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="pro-card d-flex flex-column align-items-center">
-                        <a href="#" class="d-flex flex-column align-items-center">
-                            <div class="pro-img-border">
-                                <div class="pro-img">
-                                    <img src="images/category/2.png" alt="">
+                                <div class="lesur-text">
+                                    <span>تجهیزات سرد</span>
                                 </div>
-                            </div>
-                            <div class="lesur-text">
-                                <span>فر پیتزا</span>
-                            </div>
-                        </a>
-                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="pro-card d-flex flex-column align-items-center">
-                        <a href="#" class="d-flex flex-column align-items-center">
-                            <div class="pro-img-border">
-                                <div class="pro-img">
-                                    <img src="images/category/3.png" alt="">
+                            </a>
+                         </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="pro-card d-flex flex-column align-items-center">
+                            <img class="cook" src="./images/cook.png" alt="">
+                            <a href="#" class="d-flex flex-column align-items-center">
+                                <div class="pro-img-border">
+                                    <div class="pro-img">
+                                        <img src="images/category/2.png" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="lesur-text">
-                                <span>بن ماری استیل</span>
-                            </div>
-                        </a>
-                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="pro-card d-flex flex-column align-items-center">
-                        <a href="#" class="d-flex flex-column align-items-center">
-                            <div class="pro-img-border">
-                                <div class="pro-img">
-                                    <img src="images/category/4.png" alt="">
+                                <div class="lesur-text">
+                                    <span>فر پیتزا</span>
                                 </div>
-                            </div>
-                            <div class="lesur-text">
-                                <span>خط پخت گریل</span>
-                            </div>
-                        </a>
-                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="pro-card d-flex flex-column align-items-center">
-                        <a href="#" class="d-flex flex-column align-items-center">
-                            <div class="pro-img-border">
-                                <div class="pro-img">
-                                    <img src="images/category/5.png" alt="">
+                            </a>
+                         </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="pro-card d-flex flex-column align-items-center">
+                            <img class="cook" src="./images/cook.png" alt="">
+                            <a href="#" class="d-flex flex-column align-items-center">
+                                <div class="pro-img-border">
+                                    <div class="pro-img">
+                                        <img src="images/category/3.png" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="lesur-text">
-                                <span>تجهیزات سوخاری</span>
-                            </div>
-                        </a>
-                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="pro-card d-flex flex-column align-items-center">
-                        <a href="#" class="d-flex flex-column align-items-center">
-                            <div class="pro-img-border">
-                                <div class="pro-img">
-                                    <img src="images/category/6.png" alt="">
+                                <div class="lesur-text">
+                                    <span>بن ماری استیل</span>
                                 </div>
-                            </div>
-                            <div class="lesur-text">
-                                <span>سینک صنعتی</span>
-                            </div>
-                        </a>
-                     </div>
+                            </a>
+                         </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="pro-card d-flex flex-column align-items-center">
+                            <img class="cook" src="./images/cook.png" alt="">
+                            <a href="#" class="d-flex flex-column align-items-center">
+                                <div class="pro-img-border">
+                                    <div class="pro-img">
+                                        <img src="images/category/4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="lesur-text">
+                                    <span>خط پخت گریل</span>
+                                </div>
+                            </a>
+                         </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="pro-card d-flex flex-column align-items-center">
+                            <img class="cook" src="./images/cook.png" alt="">
+                            <a href="#" class="d-flex flex-column align-items-center">
+                                <div class="pro-img-border">
+                                    <div class="pro-img">
+                                        <img src="images/category/5.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="lesur-text">
+                                    <span>تجهیزات سوخاری</span>
+                                </div>
+                            </a>
+                         </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="pro-card d-flex flex-column align-items-center">
+                            <img class="cook" src="./images/cook.png" alt="">
+                            <a href="#" class="d-flex flex-column align-items-center">
+                                <div class="pro-img-border">
+                                    <div class="pro-img">
+                                        <img src="images/category/6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="lesur-text">
+                                    <span>سینک صنعتی</span>
+                                </div>
+                            </a>
+                         </div>
+                    </div>
                 </div>
-              <div class="owl-carousel owl-theme py-5" id="owl-category">
-                  <div class="pro-card d-flex flex-column align-items-center">
-                      <a href="#" class="d-flex flex-column align-items-center">
-                          <div class="pro-img">
-                              <img src="images/category/1.png" alt="">
-                          </div>
-                          <div class="lesur-text">
-                              <span>سبزی خرد کن</span>
-                          </div>
-                      </a>
-                   </div>
-                   <div class="pro-card d-flex flex-column align-items-center">
-                      <a href="#" class="d-flex flex-column align-items-center">
-                          <div class="pro-img">
-                            <img src="images/category/2.png" alt="">
-                          </div>
-                          <div class="lesur-text">
-                              <span>فر گنبدی</span>
-                          </div>
-                      </a>
-                   </div>
-                   <div class="pro-card d-flex flex-column align-items-center">
-                      <a href="#" class="d-flex flex-column align-items-center">
-                          <div class="pro-img">
-                            <img src="images/category/3.png" alt="">
-                          </div>
-                          <div class="lesur-text">
-                              <span>کباب زن</span>
-                          </div>
-                      </a>
-                   </div>
-                   <div class="pro-card d-flex flex-column align-items-center">
-                      <a href="#" class="d-flex flex-column align-items-center">
-                          <div class="pro-img">
-                            <img src="images/category/4.png" alt="">
-                          </div>
-                          <div class="lesur-text">
-                              <span>فر مرکب</span>
-                          </div>
-                      </a>
-                   </div>
-                   <div class="pro-card d-flex flex-column align-items-center">
-                      <a href="#" class="d-flex flex-column align-items-center">
-                          <div class="pro-img">
-                            <img src="images/category/5.png" alt="">
-                          </div>
-                          <div class="lesur-text">
-                              <span>کباب زن</span>
-                          </div>
-                      </a>
-                   </div>
-                   <div class="pro-card d-flex flex-column align-items-center">
-                    <a href="#" class="d-flex flex-column align-items-center">
-                        <div class="pro-img">
-                            <img src="images/category/6.png" alt="">
-                        </div>
-                        <div class="lesur-text">
-                            <span>کباب زن</span>
-                        </div>
-                    </a>
-                 </div>
-                  
-               </div>  
             </div>
           </div>
         
@@ -742,16 +1092,40 @@
         <div class="banner-swiper-sec container-fluid mt-lg-5">
             <div class="row col-xl-11 main-row">
                 <div class="banner-swiper">
-                    <div class="swiper" id="my-swiper-2">
+                    <div class="swiper" id="my-swiper-3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                            <img src="./images/baner-swiper.png" alt="">
+                           <div class="slide-txt-2 d-flex flex-column">
+                            <span>دستگاه</span>
+                            <span>کباب زن اتوماتیک</span>
+                            <a href="#" class="mt-5">
+                                <span class="">مشاهده و خرید</span>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                        </div>
                          </div>
                         <div class="swiper-slide">
                             <img src="./images/baner-swiper.png" alt="">
+                            <div class="slide-txt-2 d-flex flex-column">
+                                <span>دستگاه</span>
+                                <span>کباب زن اتوماتیک</span>
+                                <a href="#" class="mt-5">
+                                    <span class="">مشاهده و خرید</span>
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="./images/baner-swiper.png" alt="">
+                            <div class="slide-txt-2 d-flex flex-column">
+                                <span>دستگاه</span>
+                                <span>کباب زن اتوماتیک</span>
+                                <a href="#" class="mt-5">
+                                    <span class="">مشاهده و خرید</span>
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 
@@ -774,18 +1148,18 @@
         </div>
 
          <!--------------------------most-sale-sec-2----------------->
-         <div class="most-sale container-fluid mt-lg-5">
+         <div class="most-sale container-fluid mt-5">
             <div class="row col-xl-11 main-row">
-                <div class="product-title">
+                <div class="product-title d-flex justify-content-between">
                     <span class="red">پرفروش ترین ها</span>
                     <a href="#">مشاهده همه</a>
                     
                 </div>
-                <div class="product-owl-container one mt-lg-1">
-                    <div class=" nav-btn" id="two-right">
+                <div class="product-owl-container one mt-2">
+                    <div class=" nav-btn" id="three-right">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
-                    <div class=" nav-btn" id="two-left">
+                    <div class=" nav-btn" id="three-left">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
                     <div id="sale-owl-three" class="owl-carousel owl-theme product-owl">
@@ -794,13 +1168,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/m1.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -812,13 +1186,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/1.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -830,13 +1204,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/m2.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -848,13 +1222,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/2.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
-                                        <div class="price bg-orange mt-2 px-2 py-1">
+                                        <div class="price mt-2 px-2 py-1">
                                             <span>58,600,000</span>
                                             <span>تومان</span>
                                         </div>
@@ -866,13 +1240,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/m3.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
-                                        <div class="price bg-orange mt-2 px-2 py-1">
+                                        <div class="price mt-2 px-2 py-1">
                                             <span>58,600,000</span>
                                             <span>تومان</span>
                                         </div>
@@ -886,29 +1260,29 @@
             </div>
         </div>
         <!--------------------------banners----------->
-        <div class="banner-sec container-fluid mt-lg-5" >
+        <div class="banner-sec container-fluid mt-5" >
             <div class="row col-xl-11 main-row">
-                <div class="col-lg-6">
+                <div class="col-6">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
-                    <div class="baner-text d-flex flex-column">
-                        <h2>چرخ گوشت صنعتی</h2>
-                        <span>تا 40% تخفیف</span>
-                        <a href="#">
-                            <span>مشاهده و خرید</span>
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </div>
-                    <div class="baner-img">
-                        <img src="images/baner1.png" alt="">
-                    </div>
+                        <div class="baner-text d-flex flex-column">
+                            <strong>چرخ گوشت صنعتی</strong>
+                            <span>تا 40% تخفیف</span>
+                            <a href="#">
+                                <span>مشاهده و خرید</span>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <div class="baner-img">
+                            <img src="images/baner1.png" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-6">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
                     <div class="baner-text d-flex flex-column">
-                        <h2>چرخ گوشت صنعتی</h2>
+                        <strong>چرخ گوشت صنعتی</strong>
                         <span>تا 40% تخفیف</span>
                         <a href="#">
                             <span>مشاهده و خرید</span>
@@ -922,11 +1296,11 @@
                 </div>
             </div>
             <div class="row col-xl-11 main-row ">
-                <div class="col-lg-6 mt-lg-4">
+                <div class="col-6 mt-4">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
                     <div class="baner-text d-flex flex-column">
-                        <h2>چرخ گوشت صنعتی</h2>
+                        <strong>چرخ گوشت صنعتی</strong>
                         <span>تا 40% تخفیف</span>
                         <a href="#">
                             <span>مشاهده و خرید</span>
@@ -938,11 +1312,11 @@
                     </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-lg-4">
+                <div class="col-6 mt-4">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
                     <div class="baner-text d-flex flex-column">
-                        <h2>چرخ گوشت صنعتی</h2>
+                        <strong>چرخ گوشت صنعتی</strong>
                         <span>تا 40% تخفیف</span>
                         <a href="#">
                             <span>مشاهده و خرید</span>
@@ -958,18 +1332,18 @@
         </div>
 
         <!--------------------------most-sale-sec-3----------------->
-        <div class="most-sale container-fluid mt-lg-5">
+        <div class="most-sale container-fluid mt-5">
             <div class="row col-xl-11 main-row">
-                <div class="product-title">
+                <div class="product-title d-flex justify-content-between">
                     <span class="red">پرفروش ترین ها</span>
                     <a href="#">مشاهده همه</a>
                     
                 </div>
-                <div class="product-owl-container one mt-lg-1">
-                    <div class=" nav-btn" id="two-right">
+                <div class="product-owl-container one mt-2">
+                    <div class=" nav-btn" id="four-right">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
-                    <div class=" nav-btn" id="two-left">
+                    <div class=" nav-btn" id="four-left">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
                     <div id="sale-owl-four" class="owl-carousel owl-theme product-owl">
@@ -981,10 +1355,10 @@
                                 <h3>دستگاه آب گوجه گیری</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -999,10 +1373,10 @@
                                 <h3>اسلایسر کشویی متوسط</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off ms-1 bg-orange px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -1017,10 +1391,10 @@
                                 <h3>کباب زن آبی</h3>
                                 <div class="price-off d-flex flex-column align-items-center">
                                     <div class="offs d-flex">
-                                        <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                        <div class="off bg-orange ms-1 px-2 ">%30</div>
                                        <div class="off-price ">3,660,000</div>
                                     </div>
-                                    <div class="price bg-orange mt-2 px-2 py-1">
+                                    <div class="price  mt-2 px-2 py-1">
                                         <span>58,600,000</span>
                                         <span>تومان</span>
                                     </div>
@@ -1032,13 +1406,13 @@
                                 <div class="product-img">
                                     <img src="./images/sale/s3.png" alt="">
                                 </div>
-                                <h3>گریل ترکیبی 60</h3>
+                                <h3>گریل ترکیبی طول 60</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
-                                        <div class="price bg-orange mt-2 px-2 py-1">
+                                        <div class="price mt-2 px-2 py-1">
                                             <span>58,600,000</span>
                                             <span>تومان</span>
                                         </div>
@@ -1053,10 +1427,10 @@
                                 <h3>کباب پز گازی 2 متری دهانه 50</h3>
                                     <div class="price-off d-flex flex-column align-items-center">
                                         <div class="offs d-flex">
-                                            <div class="off ms-1 bg-orange px-2 ">30%</div>
+                                            <div class="off ms-1 bg-orange px-2 ">%30</div>
                                            <div class="off-price ">3,660,000</div>
                                         </div>
-                                        <div class="price bg-orange mt-2 px-2 py-1">
+                                        <div class="price mt-2 px-2 py-1">
                                             <span>58,600,000</span>
                                             <span>تومان</span>
                                         </div>
@@ -1072,10 +1446,11 @@
 
         
         <!-------------------------product-banner----------------->
-        <div class="pro-baner-sec container-fluid mt-lg-5">
+        <div class="pro-baner-sec container-fluid mt-5">
             <div class="row col-xl-11 main-row">
-                <div class="col-md-3">
+                <div class="col-xl-3 col-6">
                     <div class="pro-baner">
+                       <a href="#">
                         <img class="ban-back" src="images/back1.png" alt="">
                         <div class="pro-ban-text d-flex flex-column">
                             <span>فر پیتزا</span>
@@ -1084,10 +1459,12 @@
                         <div class="pro-ban-img">
                             <img src="./images/pan.png" alt="">
                         </div>
+                       </a>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-6">
                     <div class="pro-baner">
+                       <a href="#">
                         <img class="ban-back" src="images/back2.png" alt="">
                         <div class="pro-ban-text d-flex flex-column">
                             <span>فر پیتزا</span>
@@ -1096,11 +1473,13 @@
                         <div class="pro-ban-img">
                             <img src="./images/knife.png" alt="">
                         </div>
+                       </a>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-6">
                     <div class="pro-baner">
-                        <img class="ban-back" src="images/back3.png" alt="">
+                        <a href="#">
+                            <img class="ban-back" src="images/back3.png" alt="">
                         <div class="pro-ban-text d-flex flex-column">
                             <span>فر پیتزا</span>
                             <span>تا 40% تخفیف</span>
@@ -1108,11 +1487,13 @@
                         <div class="pro-ban-img">
                             <img src="./images/pan2.png" alt="">
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-6">
                     <div class="pro-baner">
-                        <img class="ban-back" src="images/back4.png" alt="">
+                        <a href="#">
+                            <img class="ban-back" src="images/back4.png" alt="">
                         <div class="pro-ban-text d-flex flex-column">
                             <span>فر پیتزا</span>
                             <span>تا 40% تخفیف</span>
@@ -1120,83 +1501,86 @@
                         <div class="pro-ban-img">
                             <img src="./images/mixer.png" alt="">
                         </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
-         <!-------------------------product-banner----------------->
-         <div class="top-brands container-fluid mt-lg-5">
+         <!-------------------------brands----------------->
+         <div class="top-brands container-fluid mt-5">
             
             <div class="row col-xl-11 main-row">
                 <div class="brand-title mb-4">
                     <span>برندهای برتر</span>
                 </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/1.png" alt="">
+                <div class="row brand-items">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/1.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/2.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/2.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/3.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/3.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/4.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/4.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/5.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/5.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/6.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/6.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/7.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/7.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/8.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/8.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/9.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/9.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/10.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/10.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/11.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/11.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 p-1">
-                    <div class="brand-box">
-                        <img src="./images/brands/12.png" alt="">
+                    <div class="col-md-2 p-1">
+                        <div class="brand-box">
+                            <img src="./images/brands/12.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
             
          </div>
     </main>
-    <footer class="mt-lg-5">
+    <footer class="mt-5">
         <div class="footer-brand-social d-flex justify-content-between container-fluid py-5">
             <div class="row col-xl-11 main-row">
                 <div class="d-flex justify-content-between">
@@ -1323,7 +1707,7 @@
               </div>
             </div>
           </div>
-          <div class="footer-rights-sec container-fluid py-2">
+          <div class="footer-rights-sec container-fluid py-3">
             <div class="row col-xl-11 main-row">
               <div class="footer-container">
                 <div class="footer-rights">
@@ -1342,6 +1726,21 @@
               </div>
             </div>
           </div>
+        <div class="footer-last-part container-fluid py-4">
+            <div class="row col-xl-11 main-row">
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </p>
+                <p class="mt-2">
+                    <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</span> 
+                    <span class="gray-text">و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد</span>
+                </p>
+                <a href="#">
+                  <div class="footer-more">
+                    <span>مشاهده بیشتر</span>
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                 </a>
+            </div>
+        </div>
     </footer>
     
 

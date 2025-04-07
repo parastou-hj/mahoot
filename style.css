@@ -1,11 +1,4 @@
-body{
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-    font-size: 13px;
-    font-family: IRANYekanWebRegular;
 
-}
 @font-face {
   font-family: IRANYekanWebLight;
   src: url(./font/IRANYekanWebLight.ttf);
@@ -29,6 +22,14 @@ body{
 @font-face {
   font-family: IRANYekanWebRegular;
   src: url(./font/IRANYekanWebRegular.ttf);
+}
+body{
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-size: 14px !important;
+  font-family: IRANYekanWebRegular !important ;
+
 }
 a{
     text-decoration: none !important;
@@ -65,7 +66,12 @@ a{
     display: flex;
     justify-content: center;
 }
-
+.bar-menu{
+  display: none;
+}
+.res-search{
+  display: none;
+}
 .ad-text{
   font-size: 1.5em;
  font-family: IRANYekanWebExtraBold;
@@ -73,6 +79,13 @@ a{
 .user-basket{
     display: flex;
     justify-content: end;
+}
+.user-btn, .cart-header{
+  cursor: pointer;
+}
+.basket-txt, .user-txt{
+  display: flex;
+  flex-direction: column;
 }
 .search-input input{
     border: none;
@@ -124,7 +137,7 @@ a{
     margin-left: 10px;
   }
   .nav-item a{
-    color: #fff;
+    color: #fff !important;
   }
   .nav-item.active{
     background-color: #fff;
@@ -178,10 +191,510 @@ a{
   
   .about-sub-menu-item:hover {
     background-color: #fff;
-    color: var(--red);
+    color: var(--orange);
     transition: background-color 0.2s;
   }
   
+
+
+  .pro-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    display: none;
+    z-index: 10001;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px #e4e4e4;
+  }
+  .pro-menu.active{
+    /* opacity: 1;
+    visibility: visible; */
+    display: flex;
+  }
+  .pro-tabs {
+    width: 20%;
+    background-color: #f5f5f5;
+    height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .p-tab {
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 1px solid var(--orange); */
+    cursor: pointer;
+  }
+  .p-tab.active {
+    background-color: #fff;
+  }
+  .p-tab.active span {
+    color: var(--orange) !important;
+  }
+
+  .p-tab > div{
+    display: flex;
+    /* align-items: flex-end; */
+  }
+  .p-tab span {
+    /* color: var(--orange); */
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  .p-tab i,  .p-tab-earth i {
+    font-size: 0.6em;
+  }
+  .pro-contents {
+    width: 80%;
+    background-color: #fff;
+    height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .p-content {
+    padding: 15px;
+    display: none;
+  }
+  .p-content.active {
+    display: block;
+  }
+  .p-content a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+  }
+  .p-content a:hover span {
+    color: var(--orange);
+  }
+  .p-content a span{
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .p-content a i {
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .sub-menus {
+    padding: 10px 0px;
+    font-size: 0.9em;
+  }
+  .sub-menu {
+    padding: 10px;
+    /* border-right: 2px solid var(--orange); */
+  }
+  .sub-menu > a {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 0px;
+    border-bottom: 2px solid var(--orange);
+  }
+  .sub-menu-items {
+    padding: 10px 0px;
+  }
+  .s-b-item a:hover {
+    font-weight: bold;
+    color: var(--orange);
+  }
+
+/*--------------------------user-cart------------------*/
+.user-menu {
+  background: #f8f8ff;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0px 0px 2px #d6d6da;
+  /* padding: 15px 0; */
+  position:absolute;
+  top: 100%;
+  left: 0px;
+  width: 300px;
+  z-index: 1001;
+  font-family: IRANYekanWebRegular;
+  margin-top: 1px;
+  visibility:hidden;
+  opacity: 0;
+  transform: translateY(0px);
+  transition: transform .5s;
+}
+.user-menu.active{
+  visibility:visible;
+  opacity: 1;
+  transform: translateY(-1px);
+  transition: transform .5s;
+}
+.user{
+  position: relative;
+}
+.user-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px 15px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background:var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-left: 10px;
+
+}
+
+.user-info {
+  flex: 1;
+
+}
+
+.user-name {
+  color: var(--main-color);
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 3px;
+ 
+}
+
+.user-subtitle {
+  color: var(--gray-color);
+  font-size: 1em;
+}
+
+.user-menu .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 0px;
+
+}
+.user-menu .menu-item:last-child{
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+.menu-item:hover {
+  background: var(--orange);
+  color: var(--main-color);
+}
+.menu-item:hover  span,.menu-item:hover i{
+  color: #fff;
+}
+
+.menu-item i {
+  margin-left: 12px;
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.menu-item span {
+  font-size: 1em;
+}
+
+.wallet-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  margin: 10px 0;
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+}
+
+.wallet-amount {
+  color: #333;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.wallet-icon {
+  margin-left: 12px;
+  color: var(--main-color);
+  font-size: 18px;
+}
+
+.logout {
+  color: #dc3545;
+}
+
+.logout:hover {
+  color: #dc3545;
+  opacity: 0.9;
+}
+
+.cart-menu-container {
+  width: 400px;
+  background-color: #f8f8ff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 100%;
+  left: -0px;
+  z-index: 1001;
+  font-family: IRANYekanWebRegular;
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 1px;
+  transform: translateY(0px);
+  transition: transform .5s;
+}
+.cart-menu{
+  padding: 16px;
+}
+.cart-menu-container.active{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-1px);
+  transition: transform .5s;
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: rgb(207, 153, 35);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: .8em;
+  font-family: IRANYekanWebBold;
+}
+.products-cart-container{
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+
+.back-button {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  color: #333;
+}
+.back-button i{
+  margin-right: 5px;
+}
+
+.cart-title {
+  font-size: 14px;
+}
+
+.new-badge {
+  color: #868686;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.product-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info h3 {
+ font-size: 1em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-features {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+  font-size: 12px;
+}
+
+.product-card .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.amount {
+  font-size: .9em;
+  font-weight: bold;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+}
+.quantity span{
+  margin: 0px 5px;
+}
+.quantity button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+.quantity button:first-child:hover{
+  background: var(--red);
+  color: #fff;
+}
+
+.delete-btn {
+  color: var(--red) !important;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-button {
+ border-top: 1px solid rgb(204, 204, 204);
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+
+}
+
+.total-price {
+  background: var(--orange);
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  width: 95%;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+  /*-------------------main--------------*/
+  .fix-chat{
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    z-index: 1000;
+  }
+  .chat-box{
+    position: fixed;
+    bottom: 90px;
+    right: 70px;
+    z-index: 1005;
+    width: 350px;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .3s;
+    transform-origin: bottom right;
+    box-shadow:0px 0px 5px  hsl(0, 1%, 73%);
+  
+  }
+  .chat-box.active{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: all .5s;
+    transform-origin: bottom right;
+  
+  }
+  .chat-box i{
+    cursor: pointer;
+  }
+  .chat-header{
+    background-color: var(--orange);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-family: IRANYekanWebBold;
+  }
+  .chat-text{
+  height: 300px;
+  background-color:  hsl(0deg 0% 94.9%);
+  height: 350px;
+  }
+  .box-quiz{
+    width: 90%;
+    margin-right: 5%;
+    background-color: #fff;
+    padding: 10px;
+  }
+  .box-quiz span{
+    padding: 15px 0px;
+  }
+  
+  .box-quiz .quiz{
+    padding: 10px;
+    margin-top: 5px;
+    background: var(--orange);
+    color: #fff;
+    border-radius: 10px;
+    transform: translateX(0px);
+    transition: transform .3s;
+    cursor: pointer;
+    font-size: .9em;
+  }
+  .box-quiz .quiz:hover{
+    transform: translateX(-2px);
+    transition: transform .3s;
+  }
+  
+  
+
 
 main{
   /* padding: 0px 80px; */
@@ -190,7 +703,7 @@ main{
   /*-------------------hero-swiper--------------*/
   #my-swiper .swiper-slide{
     position: relative;
-    width: 1300px;
+    width: 1500px;
   }
   #my-swiper .swiper-slide img{
     width: 100%;
@@ -201,7 +714,7 @@ main{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 100px;
+    right: 5%;
     align-items: start;
     z-index: 1;
   }
@@ -271,8 +784,8 @@ animation: coloringBack 5.5s;
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 25px;
-  right: 150px;
+  bottom: 2%;
+  right: 18%;
   z-index: 1000;
 }
 .nav-btns >div{
@@ -300,7 +813,7 @@ animation: coloringBack 5.5s;
 }
 /*---------------------products-------------------*/
 
-.pro-img{
+.product-sec .pro-img{
   border:3px solid hsl(40.79deg 99.02% 59.8%);
   border-radius: 50%;
   padding: 2px;
@@ -308,7 +821,7 @@ animation: coloringBack 5.5s;
   height: 110px;
 
 }
-.pro-img img{
+.product-sec .pro-img img{
   border-radius: 50%;
   width: 100%;
   height: 100% ;
@@ -319,6 +832,8 @@ animation: coloringBack 5.5s;
 
 /*---------------------sale-------------------*/
 .sale-sec{
+  padding-right: 24px !important;
+  padding-left: 24px !important;
 }
 .sale {
   background-color: var(--orange);
@@ -335,25 +850,38 @@ animation: coloringBack 5.5s;
 .timer-sec {
   position: absolute;
   right: 0px; 
-  top: 0px;
   height: 290px;
   width: 200px; 
   padding: 5px;
 }
 .timer-sec strong{
-  font-size: 2em;
-  font-family: IRANYekanWebBold;
+  font-size: 2.1em;
+  font-family: IRANYekanWebExtraBold;
 }
 .timer-sec span{
-  font-size: 0.8em;
+  font-weight: bold;
   font-family: IRANYekanWebBold;;
 }
 .timer-sec i{
   font-size: 10px;
 }
 .timer-sec .sale-img{
-width: 200px;
-height:200px;
+width: 190px;
+height:190px;
+}
+.sale-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.timer{
+  text-align: center;
+}
+#hours , #seconds, #minutes{
+  font-weight: bold;
+  background-color: #fff;
+  padding: 5px 8px;
+  border-radius: 50%;
 }
 .sale-img img{
   width: 100%;
@@ -362,7 +890,7 @@ height:200px;
 }
 
 .product-owl-container {
-  width: calc(100% - 200px);
+  width: calc(100% - 190px);
   max-width: 100%;
   margin-left: 0; 
   margin-right: auto; 
@@ -387,13 +915,21 @@ height:200px;
   box-shadow: 0px 0px 15px #7e7d7d62;
   transition: .3s;
 }
-.product-box a{
+.most-sale .product-box a{
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding:10px 5px;
   color: #333;
+}
+.sale .product-box a{
+  position: relative;
+  padding:10px 5px;
+  color: #333;
+}
+.sale .product-box a h3{
+  padding-right: 10px;
 }
 
 .product-img{
@@ -414,11 +950,20 @@ height:200px;
   font-family: IRANYekanWebRegular;
 }
 .product-box a span{
-  /* background-color: var(--red);
+  /* background-color: var(--orange);
   padding: 3px 15px;
   color: #fff;
   border-radius: 50px;
   margin-top: 10px; */
+}
+.price-off{
+  font-family: IRANYekanWebBold;
+}
+.off-price{
+  color: gray;
+}
+.off{
+  direction: ltr !important;
 }
 .off , .price{
   border-radius: 25px;
@@ -452,18 +997,16 @@ height:200px;
 #my-swiper-2 .swiper-slide{
   position: relative;
   width: 900px;
-  height: 470px;
 }
 #my-swiper-2 .swiper-slide img{
   width: 100%;
- 
   }
 
 #my-swiper-2 .slide-txt-2{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 100px;
+  left: 12%;
   align-items: start;
   z-index: 1;
 }
@@ -490,7 +1033,10 @@ height:200px;
 
 /*-------------------most-sale--------------------*/
 
-
+.product-title{
+  font-size: 1.2em;
+  font-family: IRANYekanWebBold;
+}
 .most-sale-item{
   border: 1px solid rgb(189, 185, 185);
 }
@@ -513,34 +1059,64 @@ height:200px;
   cursor: pointer;
 
 }
-.product-owl-container #two-right{
+.product-owl-container #two-right, #three-right, #four-right{
   right: 20px;
 }
-.product-owl-container #two-left{
+.product-owl-container #two-left, #three-left, #four-left{
   left: 20px;
 }
 
 /*-------------------category-sale--------------------*/
+.lesur-text{
+  font-size: 1.1em;
+  margin-top: 20px;
+  font-family: IRANYekanWebBold;
+}
+.circle-category{
+  display: flex;
+  justify-content: space-between;
+}
+.category-item{
+ 
+}
 #owl-category {
-display: none;
+display: none !important;
 }
 .pro-img-border{
   border: 3px solid var(--orange);
   border-radius: 50%;
 }
 .category-sec .pro-img{
+  border-radius: 50%;
+  padding: 2px;
   border: 5px solid black;
   width: 130px;
   height: 130px;
   padding: 10px;
   background-color: hsl(0deg 0% 100%);
 }
-.category-sec .pro-img a{
-  
+.category-sec  .pro-img img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100% ;
+  object-fit: cover;
 }
+.pro-card{
+  position: relative;
+  padding: 10px;
+}
+.cook{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+
+
 .baner{
   position: relative;
-  padding: 10px 70px;
+  padding: 10px 60px;
 }
 .baner .baner-back{
   position:absolute;
@@ -553,6 +1129,71 @@ display: none;
 .baner-text{
   z-index: 0;
 }
+.baner-text strong{
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: IRANYekanWebExtraBold;
+}
+.baner-text >span{
+  font-family: IRANYekanWebBold;
+  margin: 5px 0px;
+  font-size: 1.1em;
+  color: #fff;
+}
+.baner-text a{
+  background-color: black;
+  border-radius: 25px;
+  padding: 5px 10px;
+  max-width: max-content;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baner-text i{
+  color: #fff;
+  font-size: 10px;
+}
+.baner-text a span{
+  font-size: .7em;
+  color: #fff;
+
+}
+
+#my-swiper-3 .swiper-slide{
+  position: relative;
+  width: 900px;
+}
+#my-swiper-3 .swiper-slide img{
+  width: 100%;
+ 
+  }
+
+#my-swiper-3 .slide-txt-2{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12%;
+  align-items: start;
+  z-index: 1;
+}
+
+#my-swiper-3 .slide-txt-2 span{
+  margin-top: 10px;
+  font-size: 1.7em ;
+  font-family: IRANYekanWebBold;
+  color:#fff
+}
+#my-swiper-3 a{
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+#my-swiper-3 a span{
+  color: #333 !important;
+  font-size: 0.9em !important;
+}
+
 
 /*-------------------pro-baner--------------------*/
 .pro-baner{
@@ -570,7 +1211,10 @@ display: none;
 .pro-ban-text{
   position: absolute;
   right: 30px;
-  top: 25px;
+  top: 40%;
+  transform: translateY(-60%);
+  color: #fff;
+  font-family: IRANYekanWebBold;
 }
 .pro-ban-img{
   position: absolute;
@@ -586,6 +1230,10 @@ display: none;
 }
 
 /*------------------brands---------------------------------------------*/
+.brand-title{
+  font-size: 1.2em;
+  font-family: IRANYekanWebBold;
+}
 .brand-box{
   display: flex;
   align-items: center;
@@ -608,7 +1256,7 @@ display: none;
 }
 .footer-p-one {
   background-color: hsl(0deg 0% 14.51%);
-  border-bottom: 1px solid var(--red);
+  border-bottom: 1px solid var(--orange);
 }
 .footer-list-container {
   /* flex: 1; */
@@ -621,7 +1269,7 @@ display: none;
 
 }
 .footer-tab  i {
-  color: var(--red);
+  color: var(--orange);
   display: none;
 }
 
@@ -635,11 +1283,11 @@ display: none;
   margin-top: 5px;
 }
 .footer-list-content a {
-  color: hsl(0, 0%, 57%);
+  color: hsl(0, 0%, 57%) !important;
   font-size: .9em;
 }
 .footer-list-content a:hover {
-  color: var(--red);
+  color: var(--orange);
   text-decoration: underline !important;
 }
 
@@ -697,7 +1345,7 @@ justify-content: end;
   justify-content: space-between;
 }
 .company {
-  color: var(--red);
+  color: var(--orange);
 }
 .nonegar{
   font-weight: bold;
@@ -786,4 +1434,17 @@ justify-content: end;
 
 .social-icon:hover {
   animation: pulse 1s infinite;
+}
+
+.footer-last-part {
+  font-size: 1.2em;
+  font-family: IRANYekanWebBold;
+  line-height: 40px;
+
+}
+.footer-more{
+ float: left;
+}
+.gray-text{
+  color: rgb(182, 180, 180);
 }

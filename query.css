@@ -1,0 +1,204 @@
+@media screen and (max-width:1600px){
+    #my-swiper .swiper-slide{
+        position: relative;
+        width: 1300px;
+      }
+}
+@media screen and (max-width:1400px){
+   
+    #my-swiper .swiper-slide{
+        width: 1000px;
+      }
+}
+@media screen and (max-width:1200px){
+    body{
+        font-size: 12px !important;
+    }
+    #my-swiper .swiper-slide{
+        width: 900px;
+      }
+    .header-down{
+        font-size: 12px;
+    }
+    #my-swiper .slide-txt strong{
+        font-size: 1.3em;
+      }
+      #my-swiper .slide-txt span{
+        font-size: 1.2em ;
+      }
+      #my-swiper-2 .swiper-slide{
+        position: relative;
+        width: 800px;
+      }
+      .pro-baner-sec .col-6{
+        padding: 0px 50px;
+      }
+      .pro-ban-text{
+        right:20%;
+        font-size: 1.2em;
+      }
+      .pro-ban-img{
+        left: 18%;
+
+      }
+}
+@media screen and (max-width:992px){
+    .bar-menu{
+        display: block;
+        font-size: 18px;
+    }
+    .web-search{
+        display: none;
+    }
+    .basket-txt, .user-txt{
+        display: none;
+    }
+    .header-down{
+        display: none;
+    }
+    .res-search{
+        display: block;
+        background-color: black;
+        padding: 10px 0px;
+    }
+    #my-swiper .swiper-slide{
+        width: 850px;
+      }
+      #my-swiper .slide-txt strong{
+        font-size: 1.2em;
+      }
+      #my-swiper .slide-txt span{
+        font-size: 1.1em ;
+      }
+      #my-swiper .slide-txt .more{
+        font-size: .9em;
+      }
+      .nav-btns{
+        right: 15%;
+      }
+      .nav-btns >div{
+        width: 22px;
+        height: 22px;
+      }
+      .nav-btns i{
+        font-size: 10px;
+      }
+      .pro-img{
+        width: 100px;
+        height: 100px;
+      }
+      #my-swiper-2 .swiper-slide{
+        position: relative;
+        width: 850px;
+      }
+      #my-swiper-3 .swiper-slide{
+        position: relative;
+        width: 850px;
+      }
+      .circle-category{
+        position: relative;
+      }
+      .circle-category .owl-dots{
+        position: absolute;
+        bottom: 10px !important;
+        right: 50%;
+        transform: translateX(-50%);
+      }
+      .circle-category .owl-dots span{
+        padding: 1px 8px;
+        margin: 2px;
+        border-radius: 50%;
+        background-color: orange;
+      }
+      .baner{
+        position: relative;
+        padding: 10px 20px;
+      }
+      .pro-baner-sec .col-6{
+        padding: 0px 30px;
+      }
+      .pro-ban-text{
+        right:18%;
+        font-size: 1.2em;
+      }
+      .pro-ban-img{
+        left: 15%;
+
+      }
+      .cook{
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+}
+@media screen and (max-width:768px){
+   
+    #my-swiper .swiper-slide{
+        width: 650px;
+        height: 300px;
+      }
+      .timer-sec {
+        height: 290px;
+        width: 150px; 
+        padding: 5px;
+      }
+      .timer-sec .sale-img{
+        width: 150px;
+        height:150px;
+        }
+     .product-owl-container {
+            width: calc(100% - 150px);
+        }
+     #my-swiper-2 .swiper-slide , #my-swiper-3 .swiper-slide {
+         position: relative;
+         width: 650px;
+         }
+     .baner .baner-img{
+        width: 150px;
+        height: 100px;
+    }
+    .baner .baner-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .pro-baner-sec .col-6{
+        padding: 0px 10px;
+      }
+      .pro-ban-text{
+        right:10%;
+        font-size: 1.2em;
+      }
+      .pro-ban-img{
+        left: 10%;
+
+      }
+}
+@media screen and (max-width:576px){
+   
+    #my-swiper .swiper-slide{
+        width: 500px;
+        height: 250px;
+      }
+      #my-swiper .slide-txt strong{
+        font-size: 1em;
+      }
+      #my-swiper .slide-txt span{
+        font-size: .9em ;
+      }
+      #my-swiper .slide-txt .more{
+        font-size: .7em;
+      }
+      .pro-img{
+        width: 90px;
+        height: 90px;
+      
+      }
+}
+@media screen and (max-width:480px){
+   
+    #my-swiper .swiper-slide{
+        width: 340px;
+        height: 200px;
+      }
+}
