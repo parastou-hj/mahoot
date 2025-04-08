@@ -20,8 +20,9 @@
     <header>
         <div class="advertise ">
             <div class="ad-text">
-                <span>خرید اول ارسال رایگان کد: </span>
+               <a href="#"> <span>خرید اول ارسال رایگان کد: </span>
                 <span>Winter</span>
+            </a>
             </div>
         </div>
         <div class="container-fluid header-container p-0">
@@ -29,7 +30,7 @@
                 <div class=" col-4 bar-menu justify-content-center align-items-center">
                     <i class="fa-solid fa-bars fa-xxl"></i>
                    </div>
-                <div class="col-lg-2 col-4">
+                <div class="col-lg-2 col-4 brand-header">
                     <img src="./images/brand-img.png" alt="">
                 </div>
                 <div class="col-lg-5 web-search">
@@ -89,7 +90,7 @@
                             </a>
                           </div>
                     </div>
-                    <div class="basket d-flex align-items-end me-4 position-relative">
+                    <div class="basket d-flex align-items-end me-md-4 me-1 position-relative">
                         <div class="cart-header d-flex">
                             <div class="basket-txt  ms-1">
                                 <span class="font-gray">سبد خرید</span>
@@ -486,7 +487,7 @@
         </div>
     </header>
  <!--------------------------hero-sec-->
- <div class="hero-sec py-4">
+ <div class="hero-sec py-md-4 py-1">
             
     <div class="hero-swiper">
         <div class="swiper" id="my-swiper">
@@ -559,6 +560,7 @@
 </div>
 
     <main class="">
+        <div class="overlay"></div>
         <div class="fix-chat">
             <img src="./images/chat.png" alt="">
         </div>
@@ -587,12 +589,115 @@
               </div>
             </div>
           </div>
+          <div class="off-canvas">
+            <div class="off-canvas-header d-flex justify-content-between">
+              <span>منوی دسترسی</span>
+              <div class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <div class="off-canvas-nav">
+              <div class="off-canvas-item">
+                <a href="#">صفحه اصلی</a>
+              </div>
+              <div class="off-canvas-item has-submenu">
+                <a href="#" class="category-btn">
+                  <span> محصولات</span>
+                  <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <div class="submenu level-1">
+                  <div class="submenu-header">
+                    <button class="back-btn">
+                      <i class="fa-solid fa-chevron-right"></i>
+                      <span>بازگشت</span>
+                    </button>
+                  </div>
+                  <div class="submenu-items">
+                    <div class="submenu-item has-submenu">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته اول</span>
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </a>
+                      <div class="submenu level-2">
+                        <div class="submenu-header">
+                          <button class="back-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>بازگشت</span>
+                          </button>
+                          <span>دسته اول</span>
+                        </div>
+                        <div class="submenu-items">
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 1-1</a>
+                          </div>
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 1-2</a>
+                          </div>
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 1-3</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="submenu-item has-submenu">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته دوم</span>
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </a>
+                      <div class="submenu level-2">
+                        <div class="submenu-header">
+                          <button class="back-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>بازگشت</span>
+                          </button>
+                          <span>دسته دوم</span>
+                        </div>
+                        <div class="submenu-items">
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 2-1</a>
+                          </div>
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 2-2</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="submenu-item">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته سوم</span>
+                      </a>
+                    </div>
+                    <div class="submenu-item">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته چهارم</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="off-canvas-item">
+                <span>درباره ما</span>
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+              
+              <div class="off-canvas-item">
+                <span>همکاری با ما</span>
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+              <div class="off-canvas-item">
+                <a href="#"> اخبار و رویدادها</a>
+              </div>
+              <div class="off-canvas-item">
+                <a href="#">تماس با ما</a>
+              </div>
+            </div>
+          </div>
        
         <!--------------------------product-sec-->
 
-        <div class="product-sec container-fluid">
+        <div class="product-sec container-fluid px-0">
           <div class="row col-xl-11 main-row">
-            <div class="owl-carousel owl-theme py-5" id="owl-pro">
+            <div class="owl-carousel owl-theme py-lg-5 py-4" id="owl-pro">
                 <div class="pro-card d-flex flex-column align-items-center">
                     <a href="#" class="d-flex flex-column align-items-center">
                         <div class="pro-img">
@@ -701,13 +806,13 @@
         <div class="sale-sec container-fluid">
             <div class="row col-xl-11 main-row">
                 <div class="sale ">
-                    <div class="timer-sec d-flex flex-column justify-content-start text-center mt-lg-5 mt-4">
+                    <div class="timer-sec d-flex flex-column justify-content-start text-center mt-lg-5 mt-md-4 mt-2 mb-2 ">
                         <strong>حراجستون</strong>
                         <div class="sale-img">
                             <img src="./images/sale/sheypoor.png" alt="">
                         </div>
-                        <span class="font-bold my-1">بزرگترین حراج روزانه</span>
-                        <div class="timer my-1">
+                        <span class="font-bold my-2">بزرگترین حراج روزانه</span>
+                        <div class="timer my-2">
                             <div class="" id="countdown">
                                 <span id="seconds"></span>
                                 <span> : </span>
@@ -722,7 +827,7 @@
                             <i class="fa-solid fa-chevron-left"></i>
                         </a>
                     </div>
-                    <div class="product-owl-container one mt-5">
+                    <div class="product-owl-container one mt-lg-5 mt-md-4 mt-2 mb-2">
                         <div class=" nav-btn" id="one-right">
                             <i class="fa-solid fa-chevron-right"></i>
                         </div>
@@ -829,7 +934,7 @@
         </div>
 
         <!--------------------------product-swiper-sec------------->
-        <div class="product-swiper-sec container-fluid mt-5">
+        <div class="product-swiper-sec container-fluid mt-lg-5 mt-3 px-0">
             <div class="row col-xl-11 main-row">
                 <div class="product-swiper">
                     <div class="swiper" id="my-swiper-2">
@@ -839,7 +944,7 @@
                            <div class="slide-txt-2 d-flex flex-column">
                             <span>دستگاه</span>
                             <span>کباب زن اتوماتیک</span>
-                            <a href="#" class="mt-5">
+                            <a href="#" class="mt-lg-5 mt-3">
                                 <span class="">مشاهده و خرید</span>
                                 <i class="fa-solid fa-chevron-left"></i>
                             </a>
@@ -850,7 +955,7 @@
                             <div class="slide-txt-2 d-flex flex-column">
                                 <span>دستگاه</span>
                                 <span>کباب زن اتوماتیک</span>
-                                <a href="#" class="mt-5">
+                                <a href="#" class="mt-lg-5 mt-3">
                                     <span class="">مشاهده و خرید</span>
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </a>
@@ -861,7 +966,7 @@
                             <div class="slide-txt-2 d-flex flex-column">
                                 <span>دستگاه</span>
                                 <span>کباب زن اتوماتیک</span>
-                                <a href="#" class="mt-5">
+                                <a href="#" class="mt-lg-5 mt-3">
                                     <span class="">مشاهده و خرید</span>
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </a>
@@ -877,7 +982,7 @@
         </div>
 
         <!--------------------------most-sale-sec----------------->
-        <div class="most-sale container-fluid mt-5">
+        <div class="most-sale container-fluid mt-5 px-0">
             <div class="row col-xl-11 main-row">
                 <div class="product-title d-flex justify-content-between">
                     <span class="red">پرفروش ترین ها</span>
@@ -990,7 +1095,7 @@
         </div>
 
         <!--------------------------category-owl---------------->
-        <div class="category-sec container-fluid mt-5">
+        <div class="category-sec container-fluid mt-5 px-0">
             <div class="row col-xl-11 main-row ">
                 <div class="circle-category">
                     <div class="category-item">
@@ -1089,7 +1194,7 @@
         
         
         <!--------------------------banner-swiper---------------->
-        <div class="banner-swiper-sec container-fluid mt-lg-5">
+        <div class="banner-swiper-sec container-fluid mt-lg-5 px-0">
             <div class="row col-xl-11 main-row">
                 <div class="banner-swiper">
                     <div class="swiper" id="my-swiper-3">
@@ -1148,7 +1253,7 @@
         </div>
 
          <!--------------------------most-sale-sec-2----------------->
-         <div class="most-sale container-fluid mt-5">
+         <div class="most-sale container-fluid mt-5 px-0">
             <div class="row col-xl-11 main-row">
                 <div class="product-title d-flex justify-content-between">
                     <span class="red">پرفروش ترین ها</span>
@@ -1260,9 +1365,9 @@
             </div>
         </div>
         <!--------------------------banners----------->
-        <div class="banner-sec container-fluid mt-5" >
+        <div class="banner-sec container-fluid mt-5 px-0" >
             <div class="row col-xl-11 main-row">
-                <div class="col-6">
+                <div class="col-sm-6">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
                         <div class="baner-text d-flex flex-column">
@@ -1278,7 +1383,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 mt-sm-0 mt-4">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
                     <div class="baner-text d-flex flex-column">
@@ -1296,7 +1401,7 @@
                 </div>
             </div>
             <div class="row col-xl-11 main-row ">
-                <div class="col-6 mt-4">
+                <div class="col-sm-6 mt-4">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
                     <div class="baner-text d-flex flex-column">
@@ -1312,7 +1417,7 @@
                     </div>
                     </div>
                 </div>
-                <div class="col-6 mt-4">
+                <div class="col-sm-6 mt-4">
                     <div class="baner d-flex justify-content-between align-items-center">
                         <img class="baner-back" src="./images/banner-back.png" alt="">
                     <div class="baner-text d-flex flex-column">
@@ -1332,7 +1437,7 @@
         </div>
 
         <!--------------------------most-sale-sec-3----------------->
-        <div class="most-sale container-fluid mt-5">
+        <div class="most-sale container-fluid mt-5 px-0 mb-5" >
             <div class="row col-xl-11 main-row">
                 <div class="product-title d-flex justify-content-between">
                     <span class="red">پرفروش ترین ها</span>
@@ -1446,7 +1551,7 @@
 
         
         <!-------------------------product-banner----------------->
-        <div class="pro-baner-sec container-fluid mt-5">
+        <div class="pro-baner-sec container-fluid mt-5 px-0 pt-4">
             <div class="row col-xl-11 main-row">
                 <div class="col-xl-3 col-6">
                     <div class="pro-baner">
@@ -1484,8 +1589,8 @@
                             <span>فر پیتزا</span>
                             <span>تا 40% تخفیف</span>
                         </div>
-                        <div class="pro-ban-img">
-                            <img src="./images/pan2.png" alt="">
+                        <div class="pro-ban-img pan-2">
+                            <img class="pan-2" src="./images/pan2.png" alt="">
                         </div>
                         </a>
                     </div>
@@ -1508,7 +1613,7 @@
         </div>
 
          <!-------------------------brands----------------->
-         <div class="top-brands container-fluid mt-5">
+         <div class="top-brands container-fluid mt-5 px-0">
             
             <div class="row col-xl-11 main-row">
                 <div class="brand-title mb-4">
@@ -1517,62 +1622,86 @@
                 <div class="row brand-items">
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/1.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/1.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/2.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/2.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/3.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/3.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/4.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/4.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/5.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/5.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/6.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/6.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/7.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/7.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/8.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/8.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/9.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/9.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/10.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/10.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/11.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/11.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2 p-1">
                         <div class="brand-box">
-                            <img src="./images/brands/12.png" alt="">
+                            <a href="#">
+                                <img src="./images/brands/12.png" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1581,14 +1710,13 @@
          </div>
     </main>
     <footer class="mt-5">
-        <div class="footer-brand-social d-flex justify-content-between container-fluid py-5">
+        <div class="footer-brand-social container-fluid py-lg-5 py-4 px-0">
             <div class="row col-xl-11 main-row">
-                <div class="d-flex justify-content-between">
-                    <div class="footer-brand">
+                    <div class="col-md-6 footer-brand d-flex justify-content-md-start justify-content-center align-items-center">
                         <img src="images/footer/footer-brand.png" alt="">
                     </div>
-                    <div class="social-section">
-                        <div class="socials d-flex justify-content-between mt-lg-4">
+                    <div class="col-md-6 social-section">
+                        <div class="socials d-flex justify-content-md-end justify-content-center mt-md-0 mt-4">
                             <div class="social-icon">
                                 <img src="./images/footer/telegram.png" alt="">
                             </div>
@@ -1606,11 +1734,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
 
         </div>
-        <div class="container-fluid footer-p-one py-lg-3 py-2">
+        <div class="container-fluid footer-p-one py-lg-3 py-2 px-0">
             <div class="row col-xl-11 p-one main-row">
               <div class="col-lg-3">
                 <div class="loc-tel pt-lg-2 ">
@@ -1622,7 +1749,7 @@
                       class="ms-lg-2 ms-1"
                     />
                     <p class="number">
-                      <span>آدرس : </span>    قزوین، چهارراه ولیعصر، بلوار آیت ‌الله خامنه ای، گلستان ۱۲، پلاک ۱۴۵
+                      <span>آدرس : </span>         تهران، خیابان ولیعصر، میدان منیریه، رو به روی بانک مهر، پلاک 95،طبقه 1، واحد 3
                     </p>
                   </div>
                   <div class="footer-tel d-flex mt-2">
@@ -1633,9 +1760,9 @@
                     />
                     <span class="ms-lg-2 ms-1">تلفن: </span>
                     <div class="d-flex">
-                      <div class="mx-1 d-flex align-items-center"> 09123818288</div>
+                      <div class="mx-1 d-flex align-items-center"> 09019362546</div>
                       <hr>
-                      <div class="mx-1 d-flex align-items-center" >09129497323</div
+                      <div class="mx-1 d-flex align-items-center" >09177322546</div
                       >
                     </div>
                   </div>
@@ -1646,7 +1773,7 @@
                       class="ms-lg-2 ms-1"
                     />
                     <span class="ms-lg-2 ms-1">ایمیل: </span>
-                    <span>earthing.mco@gmail.com</span>
+                    <span>mahsazare.9685780@gmail.com</span>
                   </div>
                 </div>
               </div>
@@ -1707,16 +1834,16 @@
               </div>
             </div>
           </div>
-          <div class="footer-rights-sec container-fluid py-3">
+          <div class="footer-rights-sec container-fluid py-3 px-0">
             <div class="row col-xl-11 main-row">
               <div class="footer-container">
                 <div class="footer-rights">
                   <span
                     >©کلیه حقوق این وب سایت متعلق به
-                    <a class="company"> شرکت فنی مهندسی انرژی پارس </a> می باشد.</span
+                    <a class="company">فروشگاه ماهوت استیل</a> می باشد.</span
                   >
                 </div>
-                <div class="footer-rights eng-company">
+                <div class="footer-rights eng-company mt-md-0 mt-2">
                   <span
                     >website designed by
                     <span class="nonegar">NONEGAR PARDAZESH</span>, developed by
@@ -1726,7 +1853,7 @@
               </div>
             </div>
           </div>
-        <div class="footer-last-part container-fluid py-4">
+        <div class="footer-last-part container-fluid py-4 px-0">
             <div class="row col-xl-11 main-row">
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </p>
                 <p class="mt-2">

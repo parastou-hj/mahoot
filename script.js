@@ -44,6 +44,52 @@ convertNumbersToFarsi();
 
 
 
+//off-canvas:
+
+$('.bar-menu i').on('click', function(){
+    $('.off-canvas').addClass('active');
+    $('.overlay').addClass('active');
+    $('body').css('overflow','hidden');
+    
+  })
+  $('.close-btn').on('click',function(){
+    $('.off-canvas').removeClass('active');
+    $('.overlay').removeClass('active');
+    $('body').css('overflow','auto');
+  
+  })
+  $(document).ready(function() {
+  
+    $('.category-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.submenu.level-1').addClass('active');
+    });
+  
+  
+    $('.subcategory-btn').on('click', function(e) {
+        e.preventDefault();
+        $(this).closest('.submenu-item').find('.submenu.level-2').addClass('active');
+    });
+  
+  
+    $('.back-btn').on('click', function() {
+        $(this).closest('.submenu').removeClass('active');
+    });
+  
+  
+    $('.close-btn').on('click', function() {
+        $('.submenu').removeClass('active');
+    });
+  });
+  $('body').on('click',function(e){
+    if(!e.target.closest('.off-canvas')&&!e.target.closest('.bar-menu i')&&!e.target.closest('.fixed-phone')){
+        $('.off-canvas').removeClass('active');
+        $('.overlay').removeClass('active');
+        $('body').css('overflow','auto');
+        $('.submenu').removeClass('active');
+       $('.connect').removeClass('active');
+  
+    }})
 
 //header
 
@@ -127,7 +173,14 @@ $('body').on('click',function(e){
 $('.chat-box i').on('click', function(){
     hideChat= false;
 
+
 })
+$('body').on('click',function(e){
+    if(!e.target.closest('.fix-chat')&&!e.target.closest('.chat-box')){
+        hideChat= false;
+
+    }
+  })
 })
 
   //hero-swiper
@@ -188,7 +241,7 @@ $(function(){
               // autoplayHoverPause: true,
               responsive:{
                   0:{
-                      items: 3.2
+                      items: 3
                   },
                   480:{
                     items:3.8
@@ -227,7 +280,7 @@ $(function(){
               // autoplayHoverPause: true,
               responsive:{
                 0:{
-                    items: 2
+                    items:1.2
                 },
                   550:{
                       items: 2.2
@@ -616,3 +669,30 @@ $(document).ready(function() {
 
   
 });
+
+//footer
+
+var tabs=$('.footer-tab');
+    tabs.on('click', function(){
+        // $(this).addClass('active');
+        $('#'+$(this).data('tab')).toggleClass('active')
+    })
+
+
+    //baner
+    $('.baner').on('mouseenter', function(){
+        $(this).addClass('hover-horizontal');
+        $(this).removeClass('hover-horizontal-back');
+        $(this).addClass('vertical-hover');
+        $(this).removeClass('vertical-hover-back');
+    
+    
+    })
+    $('.baner').on('mouseleave', function(){
+        $(this).removeClass('hover-horizontal');
+        $(this).addClass('hover-horizontal-back');
+        $(this).removeClass('vertical-hover');
+        $(this).addClass('vertical-hover-back');
+    
+    })
+    

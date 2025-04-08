@@ -83,9 +83,10 @@
       .nav-btns i{
         font-size: 10px;
       }
-      .pro-img{
+      .product-sec .pro-img{
         width: 100px;
         height: 100px;
+      
       }
       #my-swiper-2 .swiper-slide{
         position: relative;
@@ -98,7 +99,7 @@
       .circle-category{
         position: relative;
       }
-      .circle-category .owl-dots{
+      /* .circle-category .owl-dots{
         position: absolute;
         bottom: 10px !important;
         right: 50%;
@@ -109,7 +110,7 @@
         margin: 2px;
         border-radius: 50%;
         background-color: orange;
-      }
+      } */
       .baner{
         position: relative;
         padding: 10px 20px;
@@ -128,6 +129,74 @@
       .cook{
         width: 30px !important;
         height: 30px !important;
+      }
+      .footer-last{
+        justify-content: center;
+      }
+      .cart-menu-container {
+        width: 300px;
+        background-color: #f8f8ff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        position: absolute;
+        top: 100%;
+        left: -0px;
+        z-index: 1001;
+        font-family: IRANYekanWebRegular;
+        visibility: hidden;
+        opacity: 0;
+        margin-top: 1px;
+        transform: translateY(0px);
+        transition: transform .5s;
+      }
+      .product-card-img{
+        width: 70px;
+        height: 70px;
+      }
+      .product-card-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+      .amount{
+        font-size: 1em;
+      }
+      .user-menu {
+        width: 200px;
+        position:absolute;
+        top: 100%;
+        left: 0px;
+        font-size: .9em;
+      }
+      .user-header {
+        padding: 10px;
+      }
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+      .off-canvas-header{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px;
+        font-family: IRANYekanWebMedium;
+        color: white;
+        background-color: var(--orange);
+      }
+      .off-canvas-nav{
+        padding-top:10px ;
+      }
+      .off-canvas-item{
+        padding: 15px 20px;
+      
+      }
+      .off-canvas-navs{
+        background-color: #f5f5f5;
+      
+      }
+      .off-canvas-item i{
+        float: left;
       }
 
 }
@@ -173,12 +242,25 @@
         left: 10%;
 
       }
+      .footer-container{
+        flex-direction:column;
+        justify-content:center;
+    }
+    .footer-container >div:first-child{
+      margin-top: 5px;
+    }
+    
 }
 @media screen and (max-width:576px){
    
     #my-swiper .swiper-slide{
         width: 500px;
         height: 250px;
+      }
+      #my-swiper .slide-txt{
+        
+        right: 2%;
+        
       }
       #my-swiper .slide-txt strong{
         font-size: 1em;
@@ -189,16 +271,140 @@
       #my-swiper .slide-txt .more{
         font-size: .7em;
       }
-      .pro-img{
+      .product-sec .pro-img{
         width: 90px;
         height: 90px;
       
+      }
+      .footer-list-container{
+        flex-direction: column;
+    }
+    .footer-list-container .footer-list{
+        width: 100%;
+        margin-top: 20px;
+      }
+    .footer-list >div:first-child{
+        margin-bottom: 5px;
+        border-bottom: 1px solid var(--orange);
+        display: flex;
+      }
+      .footer-list i{
+      display: block;
+      margin-right: auto;
+      color: var(--orange);
+      cursor: pointer;
+      }
+      .footer-tab{
+        padding-bottom: 5px;
+      }
+      .footer-list-content {
+        margin-top: 10px;
+        display: none;
+      }
+      #my-swiper-2 .slide-txt-2 span{
+        margin-top: 10px;
+        font-size: 1em ;
+        
+      }
+    
+      #my-swiper-2 a span{
+        color: #333 !important;
+        font-size: 0.8em !important;
+      }
+      #my-swiper-3 .slide-txt-2 span{
+        margin-top: 10px;
+        font-size: 1em ;
+        
+      }
+    
+      #my-swiper-3 a span{
+        color: #333 !important;
+        font-size: 0.8em !important;
       }
 }
 @media screen and (max-width:480px){
    
     #my-swiper .swiper-slide{
-        width: 340px;
+        width: 380px;
         height: 200px;
       }
+    .brand-header{
+      width: 150px;
+    }
+    .brand-header img{
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+    .user-img{
+      width: 38px;
+      height: 38px;
+    }
+    .user-img img{
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+    .basket-img{
+      width: 40px;
+      height: 40px;
+    }
+    .basket-img img{
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+    .product-sec .pro-img{
+      width: 70px;
+      height: 70px;
+    }
+    .timer-sec{
+      justify-content: center;
+    }
+    .timer-sec .sale-img{
+      width: 130px;
+      height:130px;
+      }
+      .product-owl-container .nav-btn{
+        display: none;
+      }
+      .product-img{
+        width: 120px;
+        height: 140px;
+      }
+      .sale-sec{
+        padding-right: 12px !important;
+        padding-left: 12px !important;
+      }
+      #my-swiper-2 .swiper-slide , #my-swiper-3 .swiper-slide {
+        position: relative;
+        width: 380px;
+        height: 220px;
+        }
+        #my-swiper-2 .swiper-slide img, #my-swiper-3 .swiper-slide img{
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
+        
+        .category-sec .pro-img{
+          width: 100px;
+          height: 100px;
+
+        }
+        .pan-2 {
+          width: 105px;
+          left: -10px !important;
+          bottom: 80px;
+        }
+        .chat-box{
+          bottom: 70px;
+          right: 20px;
+          width: 300px;
+        }
+        .chat-text{
+          height: 280px;
+        }
+    
+
 }
