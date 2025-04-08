@@ -92,6 +92,92 @@ $('.bar-menu i').on('click', function(){
     }})
 
 //header
+// Add this to the bottom of your script.js file
+ //header-down moviing up header-top fix
+ $(document).ready(function() {
+    const headerMoving=()=>{
+      const $header = $('header');
+      const $headerContainer = $('.header-container');
+      const $mainHeader = $('.header-top');
+      const $downHeader = $('.header-down');
+      const $advertise = $('.advertise');
+      const downHeaderHeight = $downHeader.outerHeight();
+      const mainHeaderHeight = $mainHeader.outerHeight();
+      const adHeaderHeight = $advertise.outerHeight();
+      let lastScrollTop = 0;
+      let isHeaderVisible = true;
+    
+      if (window.innerWidth > 990) {
+        const totalHeight = mainHeaderHeight + downHeaderHeight+adHeaderHeight;
+        $headerContainer.css('height', totalHeight);
+        $('body').css('padding-top', totalHeight);
+        $(window).scroll(function() {
+    
+          const currentScroll = $(this).scrollTop();
+          
+          if (currentScroll > 50) {
+            if (currentScroll > lastScrollTop && isHeaderVisible) {
+              $mainHeader.addClass('lg-header-up');
+              $downHeader.addClass('header-hidden');
+              $headerContainer.css('height', mainHeaderHeight);
+              isHeaderVisible = false;
+            } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
+              $mainHeader.removeClass('lg-header-up');
+              $downHeader.removeClass('header-hidden'); 
+              $headerContainer.css('height', totalHeight);
+              isHeaderVisible = true;
+            }
+          } else {
+            $mainHeader.removeClass('lg-header-up');
+            $downHeader.removeClass('header-hidden');
+            $headerContainer.css('height', totalHeight);
+            isHeaderVisible = true;
+          }
+          
+          lastScrollTop = currentScroll;
+          
+        });
+    
+      }else if(window.innerWidth < 990){
+        const totalHeight = mainHeaderHeight + downHeaderHeight +applyHeight;
+        $headerContainer.css('height', totalHeight);
+        $('body').css('padding-top', totalHeight);
+    
+        $(window).scroll(function() {
+    
+          const currentScroll = $(this).scrollTop();
+          
+          if (currentScroll > 50) {
+            if (currentScroll > lastScrollTop && isHeaderVisible) {
+              $mainHeader.addClass('lg-header-up');
+              $downHeader.addClass('header-hidden');
+              $headerContainer.css('height', mainHeaderHeight+applyHeight);
+              isHeaderVisible = false;
+            } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
+              $mainHeader.removeClass('lg-header-up');
+              $downHeader.removeClass('header-hidden'); 
+              $headerContainer.css('height', totalHeight);
+              isHeaderVisible = true;
+            }
+          } else {
+            $mainHeader.removeClass('lg-header-up');
+            $downHeader.removeClass('header-hidden');
+            $headerContainer.css('height', totalHeight);
+            isHeaderVisible = true;
+          }
+          
+          lastScrollTop = currentScroll;
+        
+       
+        });
+    
+      }
+    }
+    headerMoving();
+       $(window).resize(headerMoving);
+    });
+
+
 
 $('document').ready(function(){
     $('.equip-header').on('mouseenter',function(){
@@ -187,11 +273,11 @@ $('body').on('click',function(e){
 var swiper = new Swiper('#my-swiper', {
     loop: true,
     speed: 3000,
-    // autoplay: {
-    //     delay: 1000,
-    //     reverseDirection:true,
-    //     // stopOnLastSlide:true
-    // },
+    autoplay: {
+        delay: 1000,
+        reverseDirection:true,
+        // stopOnLastSlide:true
+    },
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -353,11 +439,11 @@ $(document).ready(function() {
 var swiper = new Swiper('#my-swiper-2', {
     loop: true,
     speed: 3000,
-    // autoplay: {
-    //     delay: 1000,
-    //     reverseDirection:true,
-    //     // stopOnLastSlide:true
-    // },
+    autoplay: {
+        delay: 1000,
+        reverseDirection:true,
+        // stopOnLastSlide:true
+    },
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -381,11 +467,11 @@ var swiper = new Swiper('#my-swiper-2', {
 var swiper = new Swiper('#my-swiper-3', {
     loop: true,
     speed: 3000,
-    // autoplay: {
-    //     delay: 1000,
-    //     reverseDirection:true,
-    //     // stopOnLastSlide:true
-    // },
+    autoplay: {
+        delay: 1000,
+        reverseDirection:true,
+        // stopOnLastSlide:true
+    },
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,

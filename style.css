@@ -66,6 +66,19 @@ a{
     display: flex;
     justify-content: center;
 }
+/*header-down moviing up header-top fix*/
+.header-top{
+  background-color: #fff;
+}
+.header-top.lg-header-up{
+  z-index: 10001;
+  }
+  .header-down.header-hidden {
+    transform: translateY(-100%);
+    transition: all .3s ease;
+    z-index: -1;
+  
+  }
 .bar-menu{
   display: none;
 }
@@ -112,11 +125,23 @@ a{
     height: 100%;
     object-fit: contain;
 }
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20000;
+  box-shadow: 0px 1px 1px rgba(214, 214, 214, 0.788);
+  /* background-color: #fff; */
+}
 .header-down{
     background-color: var(--black);
     margin: 0px !important;
     /* position: absolute; */
     /* width: 100%; */
+    position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
   }
   .header-down.header-hidden {
     transform: translateY(-100%);
