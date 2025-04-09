@@ -60,6 +60,16 @@
         display: block;
         background-color: black;
         padding: 10px 0px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        z-index: 0;
+        transition: z-index 0.3s ease-in-out;
+    }
+    .res-search.header-hidden {
+      transform: translateY(-100%);
+      transition: transform .3s ease;
+      z-index: -1;
+    
     }
     #my-swiper .swiper-slide{
         width: 850px;
@@ -392,11 +402,22 @@
           height: 100px;
 
         }
-        .pan-2 {
+        .pro-ban-img{
+          width: 100px;
+          height: 100px;
+          left: -7px !important;
+          bottom: 70px;
+        }
+        .pro-ban-img img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        /* .pan-2 {
           width: 105px;
           left: -10px !important;
           bottom: 80px;
-        }
+        } */
         .chat-box{
           bottom: 70px;
           right: 20px;

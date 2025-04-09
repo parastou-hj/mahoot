@@ -82,34 +82,36 @@ $('.bar-menu i').on('click', function(){
     });
   });
   $('body').on('click',function(e){
-    if(!e.target.closest('.off-canvas')&&!e.target.closest('.bar-menu i')&&!e.target.closest('.fixed-phone')){
+    if(!e.target.closest('.off-canvas')&&!e.target.closest('.bar-menu i')&&!e.target.closest('.fixed-phone')&&!e.target.closest('.pro-equip')&& !e.target.closest('.equip')){
         $('.off-canvas').removeClass('active');
         $('.overlay').removeClass('active');
         $('body').css('overflow','auto');
-        $('.submenu').removeClass('active');
-       $('.connect').removeClass('active');
+      
   
     }})
 
-//header
-// Add this to the bottom of your script.js file
+
  //header-down moviing up header-top fix
  $(document).ready(function() {
     const headerMoving=()=>{
       const $header = $('header');
       const $headerContainer = $('.header-container');
-      const $mainHeader = $('.header-top');
+      const $mainHeader = $('.header-back');
       const $downHeader = $('.header-down');
       const $advertise = $('.advertise');
+      const $resSearch= $('.res-search');
+      const resSearchHeight=$resSearch.outerHeight();
       const downHeaderHeight = $downHeader.outerHeight();
       const mainHeaderHeight = $mainHeader.outerHeight();
       const adHeaderHeight = $advertise.outerHeight();
+
       let lastScrollTop = 0;
       let isHeaderVisible = true;
     
       if (window.innerWidth > 990) {
-        const totalHeight = mainHeaderHeight + downHeaderHeight+adHeaderHeight;
-        $headerContainer.css('height', totalHeight);
+        const headerHeight= mainHeaderHeight + downHeaderHeight ;
+        const totalHeight = mainHeaderHeight + downHeaderHeight + adHeaderHeight;
+        $headerContainer.css('height', headerHeight);
         $('body').css('padding-top', totalHeight);
         $(window).scroll(function() {
     
@@ -119,18 +121,18 @@ $('.bar-menu i').on('click', function(){
             if (currentScroll > lastScrollTop && isHeaderVisible) {
               $mainHeader.addClass('lg-header-up');
               $downHeader.addClass('header-hidden');
-              $headerContainer.css('height', mainHeaderHeight);
+              $headerContainer.css('height', mainHeaderHeight+adHeaderHeight);
               isHeaderVisible = false;
             } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
               $mainHeader.removeClass('lg-header-up');
               $downHeader.removeClass('header-hidden'); 
-              $headerContainer.css('height', totalHeight);
+              $headerContainer.css('height', headerHeight);
               isHeaderVisible = true;
             }
           } else {
             $mainHeader.removeClass('lg-header-up');
             $downHeader.removeClass('header-hidden');
-            $headerContainer.css('height', totalHeight);
+            $headerContainer.css('height', headerHeight);
             isHeaderVisible = true;
           }
           
@@ -139,8 +141,9 @@ $('.bar-menu i').on('click', function(){
         });
     
       }else if(window.innerWidth < 990){
-        const totalHeight = mainHeaderHeight + downHeaderHeight +applyHeight;
-        $headerContainer.css('height', totalHeight);
+        const headerHeight= mainHeaderHeight + resSearchHeight ;
+        const totalHeight = mainHeaderHeight + resSearchHeight + adHeaderHeight;
+        $headerContainer.css('height', headerHeight);
         $('body').css('padding-top', totalHeight);
     
         $(window).scroll(function() {
@@ -150,19 +153,19 @@ $('.bar-menu i').on('click', function(){
           if (currentScroll > 50) {
             if (currentScroll > lastScrollTop && isHeaderVisible) {
               $mainHeader.addClass('lg-header-up');
-              $downHeader.addClass('header-hidden');
-              $headerContainer.css('height', mainHeaderHeight+applyHeight);
+              $resSearch.addClass('header-hidden');
+              $headerContainer.css('height', mainHeaderHeight);
               isHeaderVisible = false;
             } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
               $mainHeader.removeClass('lg-header-up');
-              $downHeader.removeClass('header-hidden'); 
-              $headerContainer.css('height', totalHeight);
+              $resSearch.removeClass('header-hidden'); 
+              $headerContainer.css('height', headerHeight);
               isHeaderVisible = true;
             }
           } else {
             $mainHeader.removeClass('lg-header-up');
-            $downHeader.removeClass('header-hidden');
-            $headerContainer.css('height', totalHeight);
+            $resSearch.removeClass('header-hidden');
+            $headerContainer.css('height', headerHeight);
             isHeaderVisible = true;
           }
           
@@ -252,8 +255,6 @@ $('body').on('click',function(e){
             if (currentScroll > 200 && hideChat) {
                $('.chat-box').addClass('active');
                
-               console.log(hideChat);
-               
             }
 })
 $('.chat-box i').on('click', function(){
@@ -272,6 +273,7 @@ $('body').on('click',function(e){
   //hero-swiper
 var swiper = new Swiper('#my-swiper', {
     loop: true,
+    loopedSlides: 5,
     speed: 3000,
     autoplay: {
         delay: 1000,
@@ -438,6 +440,7 @@ $(document).ready(function() {
 //product-swiper
 var swiper = new Swiper('#my-swiper-2', {
     loop: true,
+    loopedSlides: 3,
     speed: 3000,
     autoplay: {
         delay: 1000,
@@ -466,6 +469,7 @@ var swiper = new Swiper('#my-swiper-2', {
 });
 var swiper = new Swiper('#my-swiper-3', {
     loop: true,
+    loopedSlides: 3,
     speed: 3000,
     autoplay: {
         delay: 1000,
