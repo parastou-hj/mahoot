@@ -92,44 +92,153 @@ $('.bar-menu i').on('click', function(){
 
 
  //header-down moviing up header-top fix
- $(document).ready(function() {
-    const headerMoving=()=>{
+//  $(document).ready(function() {
+//     const headerMoving=()=>{
+//       const $header = $('header');
+//       const $headerContainer = $('.header-container');
+//       const $mainHeader = $('.header-back');
+//       const $downHeader = $('.header-down');
+//       const $advertise = $('.advertise');
+//       const $resSearch= $('.res-search');
+//       const resSearchHeight=$resSearch.outerHeight();
+//       const downHeaderHeight = $downHeader.outerHeight();
+//       const mainHeaderHeight = $mainHeader.outerHeight();
+//       const adHeaderHeight = $advertise.outerHeight();
+
+//       let lastScrollTop = 0;
+//       let isHeaderVisible = true;
+    
+//       if (window.innerWidth > 990) {
+//         const headerHeight= mainHeaderHeight + downHeaderHeight ;
+//         const totalHeight = mainHeaderHeight + downHeaderHeight + adHeaderHeight;
+//         $headerContainer.css('height', headerHeight);
+//         $('body').css('padding-top', totalHeight);
+//         $(window).scroll(function() {
+    
+//           const currentScroll = $(this).scrollTop();
+          
+//           if (currentScroll > 50) {
+//             if (currentScroll > lastScrollTop && isHeaderVisible) {
+//               $mainHeader.addClass('lg-header-up');
+//               $downHeader.addClass('header-hidden');
+//               $headerContainer.css('height', mainHeaderHeight+adHeaderHeight);
+//               isHeaderVisible = false;
+//             } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
+//               $mainHeader.removeClass('lg-header-up');
+//               $downHeader.removeClass('header-hidden'); 
+//               $headerContainer.css('height', headerHeight);
+//               isHeaderVisible = true;
+//             }
+//           } else {
+//             $mainHeader.removeClass('lg-header-up');
+//             $downHeader.removeClass('header-hidden');
+//             $headerContainer.css('height', headerHeight);
+//             isHeaderVisible = true;
+//           }
+          
+//           lastScrollTop = currentScroll;
+          
+//         });
+    
+//       }else if(window.innerWidth < 990){
+//         const headerHeight= mainHeaderHeight + resSearchHeight ;
+//         const totalHeight = mainHeaderHeight + resSearchHeight + adHeaderHeight;
+//         $headerContainer.css('height', headerHeight);
+//         $('body').css('padding-top', totalHeight);
+    
+//         $(window).scroll(function() {
+    
+//           const currentScroll = $(this).scrollTop();
+          
+//           if (currentScroll > 50) {
+//             if (currentScroll > lastScrollTop && isHeaderVisible) {
+//               $mainHeader.addClass('lg-header-up');
+//               $resSearch.addClass('header-hidden');
+//               $headerContainer.css('height', mainHeaderHeight);
+//               isHeaderVisible = false;
+//             } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
+//               $mainHeader.removeClass('lg-header-up');
+//               $resSearch.removeClass('header-hidden'); 
+//               $headerContainer.css('height', headerHeight);
+//               isHeaderVisible = true;
+//             }
+//           } else {
+//             $mainHeader.removeClass('lg-header-up');
+//             $resSearch.removeClass('header-hidden');
+//             $headerContainer.css('height', headerHeight);
+//             isHeaderVisible = true;
+//           }
+          
+//           lastScrollTop = currentScroll;
+        
+       
+//         });
+    
+//       }
+//     }
+//     headerMoving();
+//        $(window).resize(headerMoving);
+//     });
+$(document).ready(function() {
+    const headerMoving = () => {
+      // Cache DOM elements for better performance
       const $header = $('header');
       const $headerContainer = $('.header-container');
       const $mainHeader = $('.header-back');
       const $downHeader = $('.header-down');
       const $advertise = $('.advertise');
-      const $resSearch= $('.res-search');
-      const resSearchHeight=$resSearch.outerHeight();
-      const downHeaderHeight = $downHeader.outerHeight();
-      const mainHeaderHeight = $mainHeader.outerHeight();
-      const adHeaderHeight = $advertise.outerHeight();
-
+      const $resSearch = $('.res-search');
+      
+      // Get element heights
+      const resSearchHeight = $resSearch.outerHeight() || 0;
+      const downHeaderHeight = $downHeader.outerHeight() || 0;
+      const mainHeaderHeight = $mainHeader.outerHeight() || 0;
+      const adHeaderHeight = $advertise.outerHeight() || 0;
+  
+      // Variables for scroll tracking
       let lastScrollTop = 0;
       let isHeaderVisible = true;
-    
-      if (window.innerWidth > 990) {
-        const headerHeight= mainHeaderHeight + downHeaderHeight ;
-        const totalHeight = mainHeaderHeight + downHeaderHeight + adHeaderHeight;
+      
+      // Reset any existing classes first
+      $mainHeader.removeClass('lg-header-up');
+      $downHeader.removeClass('header-hidden');
+      $resSearch.removeClass('header-hidden');
+      
+      // Setup for desktop (> 992px)
+      if (window.innerWidth > 992) {
+        console.log("Desktop mode activated");
+        // Calculate heights
+        const headerHeight = mainHeaderHeight + downHeaderHeight;
+        const totalHeight = headerHeight + adHeaderHeight;
+        
+        // Set initial heights
         $headerContainer.css('height', headerHeight);
         $('body').css('padding-top', totalHeight);
-        $(window).scroll(function() {
-    
+        
+        // Scroll handler for desktop
+        $(window).off('scroll.headerDesktop').on('scroll.headerDesktop', function() {
           const currentScroll = $(this).scrollTop();
           
+          // Only trigger changes after scrolling down a bit
           if (currentScroll > 50) {
+            // Scrolling down - hide header-down
             if (currentScroll > lastScrollTop && isHeaderVisible) {
               $mainHeader.addClass('lg-header-up');
               $downHeader.addClass('header-hidden');
-              $headerContainer.css('height', mainHeaderHeight+adHeaderHeight);
+              $headerContainer.css('height', mainHeaderHeight);
               isHeaderVisible = false;
-            } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
+              console.log("Desktop: Hiding header-down");
+            } 
+            // Scrolling up - show header-down
+            else if (currentScroll < lastScrollTop && !isHeaderVisible) {
               $mainHeader.removeClass('lg-header-up');
-              $downHeader.removeClass('header-hidden'); 
+              $downHeader.removeClass('header-hidden');
               $headerContainer.css('height', headerHeight);
               isHeaderVisible = true;
+              console.log("Desktop: Showing header-down");
             }
           } else {
+            // At the top of the page, show everything
             $mainHeader.removeClass('lg-header-up');
             $downHeader.removeClass('header-hidden');
             $headerContainer.css('height', headerHeight);
@@ -137,32 +246,42 @@ $('.bar-menu i').on('click', function(){
           }
           
           lastScrollTop = currentScroll;
-          
         });
-    
-      }else if(window.innerWidth < 990){
-        const headerHeight= mainHeaderHeight + resSearchHeight ;
-        const totalHeight = mainHeaderHeight + resSearchHeight + adHeaderHeight;
+      } 
+      // Setup for mobile (≤ 992px)
+      else {
+        console.log("Mobile mode activated");
+        // Calculate heights for mobile
+        const headerHeight = mainHeaderHeight + resSearchHeight;
+        const totalHeight = headerHeight + adHeaderHeight;
+        
+        // Set initial heights
         $headerContainer.css('height', headerHeight);
         $('body').css('padding-top', totalHeight);
-    
-        $(window).scroll(function() {
-    
+        
+        // Scroll handler for mobile
+        $(window).off('scroll.headerMobile').on('scroll.headerMobile', function() {
           const currentScroll = $(this).scrollTop();
           
           if (currentScroll > 50) {
+            // Scrolling down - hide res-search
             if (currentScroll > lastScrollTop && isHeaderVisible) {
               $mainHeader.addClass('lg-header-up');
               $resSearch.addClass('header-hidden');
               $headerContainer.css('height', mainHeaderHeight);
               isHeaderVisible = false;
-            } else if (currentScroll < lastScrollTop && !isHeaderVisible) {
+              console.log("Mobile: Hiding res-search");
+            } 
+            // Scrolling up - show res-search
+            else if (currentScroll < lastScrollTop && !isHeaderVisible) {
               $mainHeader.removeClass('lg-header-up');
-              $resSearch.removeClass('header-hidden'); 
+              $resSearch.removeClass('header-hidden');
               $headerContainer.css('height', headerHeight);
               isHeaderVisible = true;
+              console.log("Mobile: Showing res-search");
             }
           } else {
+            // At the top of the page, show everything
             $mainHeader.removeClass('lg-header-up');
             $resSearch.removeClass('header-hidden');
             $headerContainer.css('height', headerHeight);
@@ -170,15 +289,23 @@ $('.bar-menu i').on('click', function(){
           }
           
           lastScrollTop = currentScroll;
-        
-       
         });
-    
       }
-    }
+    };
+  
+    // Initialize on document ready
     headerMoving();
-       $(window).resize(headerMoving);
+    
+    // Reinitialize on window resize with debounce
+    let resizeTimer;
+    $(window).on('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        console.log("Window resized - reinitializing header behavior");
+        headerMoving();
+      }, 250);
     });
+  });
 
 
 

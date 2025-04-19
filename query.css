@@ -65,12 +65,12 @@
         z-index: 0;
         transition: z-index 0.3s ease-in-out;
     }
-    .res-search.header-hidden {
+    /* .res-search.header-hidden {
       transform: translateY(-100%);
       transition: transform .3s ease;
       z-index: -1;
     
-    }
+    } */
     #my-swiper .swiper-slide{
         width: 850px;
       }
